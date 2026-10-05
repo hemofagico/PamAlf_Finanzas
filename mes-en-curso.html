@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-container": "#008378", "secondary-fixed": "#dae2fd", "error-container": "#ffdad6", "primary": "#00685f", "outline": "#6d7a77", "surface-container-highest": "#d3e4fe", "on-tertiary": "#ffffff", "surface-variant": "#d3e4fe", "background": "#f8f9ff", "inverse-primary": "#6bd8cb", "on-primary-fixed": "#00201d", "surface-container-high": "#dce9ff", "secondary-container": "#dae2fd", "on-tertiary-container": "#fffbff", "on-error": "#ffffff", "surface": "#f8f9ff", "on-primary-fixed-variant": "#005049", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#bec6e0", "secondary": "#565e74", "on-secondary-container": "#5c647a", "on-primary-container": "#f4fffc", "primary-fixed-dim": "#6bd8cb", "surface-dim": "#cbdbf5", "on-surface": "#0b1c30", "on-tertiary-fixed": "#2a1700", "on-secondary": "#ffffff", "tertiary-container": "#a36700", "on-secondary-fixed": "#131b2e", "on-secondary-fixed-variant": "#3f465c", "on-surface-variant": "#3d4947", "on-background": "#0b1c30", "tertiary": "#825100", "on-tertiary-fixed-variant": "#653e00", "surface-container-low": "#eff4ff", "tertiary-fixed-dim": "#ffb95f", "primary-fixed": "#89f5e7", "outline-variant": "#bcc9c6", "on-primary": "#ffffff", "inverse-on-surface": "#eaf1ff", "tertiary-fixed": "#ffddb8", "on-error-container": "#93000a", "surface-bright": "#f8f9ff", "inverse-surface": "#213145", "surface-container": "#e5eeff", "surface-tint": "#006a61" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.25rem", "space-md": "0.75rem", "space-xl": "2rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin-desktop": "2.5rem", "margin": "1rem", "margin-tablet": "1.5rem", "gutter": "1rem" }, fontFamily: { "metric-display": ["Manrope"], "headline-xl-mobile": ["Manrope"], "headline-lg": ["Manrope"], "metric-display-mobile": ["Manrope"], "headline-xl": ["Manrope"], "label-lg": ["Hanken Grotesk"], "body-lg": ["Manrope"], "body-md": ["Manrope"], "body-sm": ["Manrope"], "label-md": ["Hanken Grotesk"], "headline-md": ["Manrope"], "label-caps": ["Hanken Grotesk"], "headline-lg-mobile": ["Manrope"] }, fontSize: { "metric-display": ["2rem", { lineHeight: "2.25rem", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-xl-mobile": ["1.75rem", { lineHeight: "2.25rem", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg": ["1.75rem", { lineHeight: "2.25rem", letterSpacing: "-0.02em", fontWeight: "600" }], "metric-display-mobile": ["1.5rem", { lineHeight: "1.875rem", letterSpacing: "-0.025em", fontWeight: "700" }], "headline-xl": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-0.025em", fontWeight: "700" }], "label-lg": ["0.875rem", { lineHeight: "1.25rem", letterSpacing: "0.01em", fontWeight: "600" }], "body-lg": ["1rem", { lineHeight: "1.5rem", letterSpacing: "-0.005em", fontWeight: "400" }], "body-md": ["0.875rem", { lineHeight: "1.375rem", letterSpacing: "0em", fontWeight: "400" }], "body-sm": ["0.75rem", { lineHeight: "1.125rem", letterSpacing: "0.01em", fontWeight: "400" }], "label-md": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.025em", fontWeight: "600" }], "headline-md": ["1.25rem", { lineHeight: "1.75rem", letterSpacing: "-0.01em", fontWeight: "600" }], "label-caps": ["0.6875rem", { lineHeight: "0.875rem", letterSpacing: "0.06em", fontWeight: "700" }], "headline-lg-mobile": ["1.375rem", { lineHeight: "1.75rem", letterSpacing: "-0.015em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Finanzas Claras Logo" class="h-8 w-auto object-contain flex-shrink-0" src="screen_logo.png"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-on-surface truncate">Finanzas Claras</span><span class="font-label-caps text-label-caps text-on-surface-variant font-normal hidden xs:inline">• Mes En Curso</span></div><div class="flex items-center gap-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-caps text-label-caps text-primary truncate">Drive sincronizado (2)</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Estado de sincronización Drive" class="w-11 h-11 flex items-center justify-center rounded-full text-primary hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">cloud_done</span></button><div class="relative flex items-center justify-center p-0.5 rounded-full bg-secondary-container"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ264MjA5E1oby9sCK0PXSZDe5YkX2gv4d4TP-kuPRdSIO3vwoSeqyq_jpddfpCND52FaBXEIF8s7a1xxXVTx3Rrb8pY6u3jFjnMB5W5VydybYP1UoS6UtEFcHwyyy5HX4-4BpxHVD4GIEvnBZD2iECrcW9j4zuceBZzvwQ2d4P-lDbFm94lMT66K-QLtwB-bzIczlTephUiqRVwkz20NkTPP5_PRVzSsOa6rS-M0blePotPxEwvUbRA"/><span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-primary rounded-full ring-2 ring-surface flex items-center justify-center"><span class="material-symbols-outlined text-[8px] text-on-primary">group</span></span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin space-y-space-md pb-12">
+<!-- Header Contextual & Acciones de Cierre de Mes -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[24px]">calendar_month</span>
+<h2 class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Octubre 2024</h2>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2.5 py-1 rounded-full text-on-surface-variant">
+<span class="inline-block w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+<span class="font-label-caps text-label-caps">Mes en curso</span>
+</div>
+</div>
+<!-- Banner de Alerta Informativa -->
+<div class="bg-secondary-container/60 rounded-lg p-2.5 flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 flex-shrink-0">info</span>
+<p class="font-body-sm text-body-sm text-on-secondary-container leading-tight">
+        Aviso: Cierre automático programado el 31 de Octubre a las 23:59 si no se ha cerrado manualmente.
+      </p>
+</div>
+<!-- Botonera de Gestión de Mes -->
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-space-xs pt-1">
+<button class="h-11 px-4 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-sm active:scale-[0.98] transition-transform" id="btn-cerrar-mes" type="button">
+<span class="material-symbols-outlined text-[18px]">lock_clock</span>
+<span>Cerrar Mes y Guardar</span>
+</button>
+<button class="h-11 px-4 rounded-lg bg-surface-container hover:bg-surface-container-high text-error font-label-lg text-label-lg flex items-center justify-center gap-2 transition-colors" id="btn-resetear-mes" type="button">
+<span class="material-symbols-outlined text-[18px]">restart_alt</span>
+<span>Resetear Todo el Mes</span>
+</button>
+</div>
+</section>
+<!-- Tarjeta de Saldo e Indicadores Clave -->
+<section class="bg-surface-container-low rounded-xl p-space-md shadow-sm">
+<div class="grid grid-cols-3 gap-2 text-center divide-x-0">
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Ingresos</span>
+<span class="font-headline-md text-headline-md text-primary mt-0.5">3.850,00 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nóminas conjuntas</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Gastos</span>
+<span class="font-headline-md text-headline-md text-error mt-0.5">2.415,60 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">62.7% consumido</span>
+</div>
+<div class="flex flex-col items-center">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Saldo Actual</span>
+<span class="font-headline-md text-headline-md text-primary font-bold mt-0.5">+1.434,40 €</span>
+<span class="font-body-sm text-body-sm text-primary">En cuenta hogar</span>
+</div>
+</div>
+</section>
+<!-- SECCIÓN: VIDA DIARIA -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-lg bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">shopping_cart</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Vida Diaria</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Partidas con acumulación de tickets</p>
+</div>
+</div>
+<button class="h-10 px-3.5 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center gap-1.5 shadow-sm active:scale-95 transition-all" id="btn-open-modal-vd" type="button">
+<span class="material-symbols-outlined text-[18px]">add_circle</span>
+<span>Añadir Entrada</span>
+</button>
+</div>
+<!-- Lista de partidas de Vida Diaria -->
+<div class="space-y-space-xs">
+<!-- Partida 1: ALIMENTACIÓN (EXPANDIDA POR DEFECTO) -->
+<div class="rounded-xl bg-surface-container-low p-space-sm space-y-space-xs" id="group-alimentacion">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<button class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" onclick="toggleDetails('details-alimentacion', 'icon-alimentacion')" type="button">
+<span class="material-symbols-outlined text-[18px]" id="icon-alimentacion">remove</span>
+</button>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Alimentación</span>
+<span class="material-symbols-outlined text-[14px] text-outline" title="Total calculado por tickets individuales">lock</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Presupuesto: 450,00 €</span>
+</div>
+</div>
+<div class="text-right flex flex-col items-end">
+<span class="font-headline-md text-headline-md text-on-surface tabular-nums">342,50 €</span>
+<span class="bg-surface-container px-2 py-0.5 rounded text-[10px] font-label-caps text-on-surface-variant">Auto-calculado</span>
+</div>
+</div>
+<!-- Barra de Progreso Alimentación -->
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full rounded-full" style="width: 76.1%;"></div>
+</div>
+<!-- Sublista expandida de tickets de Alimentación -->
+<div class="space-y-1.5 pt-2 pl-2" id="details-alimentacion">
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">03/10</span>
+<span class="font-body-sm text-body-sm truncate">Mercadona compra semanal</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary-container text-on-secondary-container">Elena</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">78,40 €</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">08/10</span>
+<span class="font-body-sm text-body-sm truncate">Frutería de barrio</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-primary-fixed text-on-primary-fixed">Carlos</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">18,20 €</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">15/10</span>
+<span class="font-body-sm text-body-sm truncate">Carrefour compra quincenal</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary-container text-on-secondary-container">Elena</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">142,30 €</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">21/10</span>
+<span class="font-body-sm text-body-sm truncate">Panadería y frescos</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-primary-fixed text-on-primary-fixed">Carlos</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">12,50 €</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">26/10</span>
+<span class="font-body-sm text-body-sm truncate">Día supermercado</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary-container text-on-secondary-container">Elena</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">91,10 €</span>
+</div>
+</div>
+</div>
+<!-- Partida 2: GASOLINA / TRANSPORTE (COLAPSADA) -->
+<div class="rounded-xl bg-surface-container-low p-space-sm space-y-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<button class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" onclick="toggleDetails('details-gasolina', 'icon-gasolina')" type="button">
+<span class="material-symbols-outlined text-[18px]" id="icon-gasolina">add</span>
+</button>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Gasolina / Transporte</span>
+<span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Presupuesto: 140,00 €</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-on-surface tabular-nums">95,00 €</span>
+</div>
+</div>
+<div class="hidden space-y-1.5 pt-2 pl-2" id="details-gasolina">
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">04/10</span>
+<span class="font-body-sm text-body-sm truncate">Repsol depósito (Elena)</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">55,00 €</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">18/10</span>
+<span class="font-body-sm text-body-sm truncate">Abono transporte Cercanías (Carlos)</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">40,00 €</span>
+</div>
+</div>
+</div>
+<!-- Partida 3: SALUD / FARMACIA -->
+<div class="rounded-xl bg-surface-container-low p-space-sm space-y-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<button class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" onclick="toggleDetails('details-salud', 'icon-salud')" type="button">
+<span class="material-symbols-outlined text-[18px]" id="icon-salud">add</span>
+</button>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Salud / Farmacia</span>
+<span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Presupuesto: 50,00 €</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-on-surface tabular-nums">28,30 €</span>
+</div>
+</div>
+<div class="hidden space-y-1.5 pt-2 pl-2" id="details-salud">
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">11/10</span>
+<span class="font-body-sm text-body-sm truncate">Farmacia Central (Botiquín)</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">28,30 €</span>
+</div>
+</div>
+</div>
+<!-- Partida 4: OCIO / RESTAURANTES -->
+<div class="rounded-xl bg-surface-container-low p-space-sm space-y-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<button class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" onclick="toggleDetails('details-ocio', 'icon-ocio')" type="button">
+<span class="material-symbols-outlined text-[18px]" id="icon-ocio">add</span>
+</button>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Ocio / Restaurantes</span>
+<span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Presupuesto: 150,00 €</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-on-surface tabular-nums">115,00 €</span>
+</div>
+</div>
+<div class="hidden space-y-1.5 pt-2 pl-2" id="details-ocio">
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">12/10</span>
+<span class="font-body-sm text-body-sm truncate">Cena Aniversario Trattoria</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">82,00 €</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">19/10</span>
+<span class="font-body-sm text-body-sm truncate">Cine + merienda</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">33,00 €</span>
+</div>
+</div>
+</div>
+<!-- Partida 5: COMPRAS / PERSONALES -->
+<div class="rounded-xl bg-surface-container-low p-space-sm space-y-space-xs">
+<div class="flex items-center justify-between gap-2">
+<div class="flex items-center gap-2 min-w-0">
+<button class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" onclick="toggleDetails('details-compras', 'icon-compras')" type="button">
+<span class="material-symbols-outlined text-[18px]" id="icon-compras">add</span>
+</button>
+<div class="min-w-0">
+<div class="flex items-center gap-1.5">
+<span class="font-label-lg text-label-lg text-on-surface truncate">Compras / Personales</span>
+<span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Presupuesto: 100,00 €</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-on-surface tabular-nums">64,20 €</span>
+</div>
+</div>
+<div class="hidden space-y-1.5 pt-2 pl-2" id="details-compras">
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">22/10</span>
+<span class="font-body-sm text-body-sm truncate">Menaje cocina Zara Home</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">64,20 €</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- SECCIÓN: OTROS (CON DESGLOSE EXPANDIDO) -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<button class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors" onclick="toggleDetails('details-otros', 'icon-otros')" type="button">
+<span class="material-symbols-outlined text-[18px]" id="icon-otros">remove</span>
+</button>
+<div>
+<div class="flex items-center gap-1.5">
+<h3 class="font-headline-md text-headline-md text-on-surface">Otros / Imprevistos</h3>
+<span class="material-symbols-outlined text-[14px] text-outline">lock</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Entradas no categorizadas</p>
+</div>
+</div>
+<div class="text-right">
+<span class="font-headline-md text-headline-md text-on-surface tabular-nums">100,00 €</span>
+<div class="font-body-sm text-body-sm text-on-surface-variant">2 registros</div>
+</div>
+</div>
+<!-- Lista expandida de entradas en Otros -->
+<div class="space-y-1.5 pt-2" id="details-otros">
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-low text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">05/10</span>
+<span class="font-body-sm text-body-sm truncate">Reparación persiana salón</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-secondary-container text-on-secondary-container">Elena</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">65,00 €</span>
+</div>
+<div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-low text-on-surface">
+<div class="flex items-center gap-2 min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant w-10">18/10</span>
+<span class="font-body-sm text-body-sm truncate">Regalo cumpleaños sobrino</span>
+<span class="px-1.5 py-0.5 rounded text-[10px] bg-primary-fixed text-on-primary-fixed">Carlos</span>
+</div>
+<span class="font-label-lg text-label-lg tabular-nums">35,00 €</span>
+</div>
+</div>
+</section>
+<!-- OTRAS SECCIONES FIJAS DE LA PLANTILLA -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm">
+<div class="flex items-center justify-between mb-1">
+<h3 class="font-headline-md text-headline-md text-on-surface">Gastos Fijos y Suministros</h3>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Cargos de plantilla</span>
+</div>
+<!-- Vivienda -->
+<div class="flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">home</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Vivienda e Hipoteca</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cargo día 1</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-on-surface tabular-nums">850,00 €</span>
+<span class="block text-[11px] text-primary">Pagado</span>
+</div>
+</div>
+<!-- Suministros -->
+<div class="flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">bolt</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Suministros (Luz, Agua, Gas, Fibra)</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Facturación recurrente</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-on-surface tabular-nums">215,60 €</span>
+<span class="block text-[11px] text-primary">Pagado</span>
+</div>
+</div>
+<!-- Seguros y Deudas -->
+<div class="flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">security</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Seguros y Préstamo Coche</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Cuotas mensuales</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-on-surface tabular-nums">325,00 €</span>
+<span class="block text-[11px] text-primary">Pagado</span>
+</div>
+</div>
+<!-- Suscripciones y Ocio Hogar -->
+<div class="flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container-low">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-primary text-[20px]">tv</span>
+<div>
+<span class="font-label-lg text-label-lg text-on-surface block">Suscripciones Digitales</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Streaming, iCloud, Gimnasio</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-lg text-label-lg text-on-surface tabular-nums">80,00 €</span>
+<span class="block text-[11px] text-primary">Pagado</span>
+</div>
+</div>
+</section>
+<!-- Resumen de Cierre de Página -->
+<section class="bg-surface-container-high rounded-xl p-space-md text-on-surface flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">cloud_sync</span>
+<div>
+<span class="font-label-lg text-label-lg block">Google Drive Sincronizado</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Último cambio guardado hace 2 min</span>
+</div>
+</div>
+<div class="text-right">
+<span class="font-label-caps text-label-caps text-on-surface-variant block uppercase">Disponible</span>
+<span class="font-headline-md text-headline-md text-primary font-bold">+1.434,40 €</span>
+</div>
+</section>
+<!-- MODAL POP-UP: AÑADIR ENTRADA -->
+<div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-on-surface/40 backdrop-blur-sm hidden" id="modal-nuevo-gasto">
+<div class="w-full sm:max-w-md bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl p-space-md shadow-xl space-y-space-md animate-in fade-in slide-in-from-bottom duration-200">
+<!-- Encabezado Modal -->
+<div class="flex items-center justify-between pb-1">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 rounded-full bg-primary-container/20 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-on-surface">Añadir Entrada</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Vida Diaria / Otros</p>
+</div>
+</div>
+<button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface" id="btn-close-modal" type="button">
+<span class="material-symbols-outlined text-[18px]">close</span>
+</button>
+</div>
+<!-- Formulario de Entrada -->
+<form class="space-y-space-sm" id="form-nuevo-gasto" onsubmit="event.preventDefault(); guardarNuevoGasto();">
+<!-- Fecha -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Fecha</label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-3 h-11">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">event</span>
+<input class="bg-transparent text-on-surface w-full font-body-md text-body-md focus:outline-none" required="" type="date" value="2024-10-28"/>
+</div>
+</div>
+<!-- Concepto / Descripción -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Concepto / Descripción</label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-3 h-11">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">description</span>
+<input class="bg-transparent text-on-surface w-full font-body-md text-body-md focus:outline-none" placeholder="Ej. Compra supermercado Mercadona" required="" type="text"/>
+</div>
+</div>
+<!-- Categoría / Partida Asociada -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Categoría / Partida</label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-3 h-11">
+<span class="material-symbols-outlined text-outline text-[18px] mr-2">category</span>
+<select class="bg-transparent text-on-surface w-full font-body-md text-body-md focus:outline-none" id="select-partida">
+<option selected="" value="alimentacion">Alimentación</option>
+<option value="gasolina">Gasolina / Transporte</option>
+<option value="salud">Salud / Farmacia</option>
+<option value="ocio">Ocio / Restaurantes</option>
+<option value="compras">Compras / Personales</option>
+<option value="otros">Otros / Imprevistos</option>
+</select>
+</div>
+</div>
+<!-- Cantidad en Euros -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Cantidad en €</label>
+<div class="flex items-center bg-surface-container-low rounded-lg px-3 h-11">
+<span class="font-headline-md text-headline-md text-primary mr-2">€</span>
+<input class="bg-transparent text-on-surface w-full font-headline-md text-headline-md focus:outline-none tabular-nums" min="0.01" placeholder="45,50" required="" step="0.01" type="number"/>
+</div>
+</div>
+<!-- Pagado Por (Elena / Carlos) -->
+<div>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1.5">Pagado por</label>
+<div class="grid grid-cols-2 gap-2">
+<label class="flex items-center justify-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer has-[:checked]:bg-primary has-[:checked]:text-on-primary transition-colors">
+<input checked="" class="hidden" name="pagado_por" type="radio" value="Elena"/>
+<span class="material-symbols-outlined text-[18px]">person</span>
+<span class="font-label-lg text-label-lg">Elena</span>
+</label>
+<label class="flex items-center justify-center gap-2 p-2.5 rounded-lg bg-surface-container-low cursor-pointer has-[:checked]:bg-primary has-[:checked]:text-on-primary transition-colors">
+<input class="hidden" name="pagado_por" type="radio" value="Carlos"/>
+<span class="material-symbols-outlined text-[18px]">person</span>
+<span class="font-label-lg text-label-lg">Carlos</span>
+</label>
+</div>
+</div>
+<!-- Botones de Acción Modal -->
+<div class="grid grid-cols-2 gap-2 pt-2">
+<button class="h-11 rounded-lg bg-surface-container hover:bg-surface-container-high text-on-surface font-label-lg text-label-lg transition-colors" id="btn-cancel-modal" type="button">
+            Cancelar
+          </button>
+<button class="h-11 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg shadow-sm active:scale-95 transition-transform" type="submit">
+            Guardar e Incrementar
+          </button>
+</div>
+</form>
+</div>
+</div>
+</div>
+<script>
+  function toggleDetails(containerId, iconId) {
+    const el = document.getElementById(containerId);
+    const icon = document.getElementById(iconId);
+    if (!el || !icon) return;
+
+    if (el.classList.contains('hidden')) {
+      el.classList.remove('hidden');
+      icon.textContent = 'remove';
+    } else {
+      el.classList.add('hidden');
+      icon.textContent = 'add';
+    }
+  }
+
+  const modal = document.getElementById('modal-nuevo-gasto');
+  const btnOpenModal = document.getElementById('btn-open-modal-vd');
+  const btnCloseModal = document.getElementById('btn-close-modal');
+  const btnCancelModal = document.getElementById('btn-cancel-modal');
+
+  function openModal() {
+    modal.classList.remove('hidden');
+  }
+
+  function closeModal() {
+    modal.classList.add('hidden');
+  }
+
+  if (btnOpenModal) btnOpenModal.addEventListener('click', openModal);
+  if (btnCloseModal) btnCloseModal.addEventListener('click', closeModal);
+  if (btnCancelModal) btnCancelModal.addEventListener('click', closeModal);
+
+  // Cierre de modal al hacer clic en backdrop
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) closeModal();
+  });
+
+  function guardarNuevoGasto() {
+    closeModal();
+    const btnCerrar = document.getElementById('btn-cerrar-mes');
+    if (btnCerrar) {
+      btnCerrar.classList.add('ring-2', 'ring-primary-fixed');
+      setTimeout(() => btnCerrar.classList.remove('ring-2', 'ring-primary-fixed'), 800);
+    }
+  }
+
+  // Interacción botones superiores
+  document.getElementById('btn-resetear-mes')?.addEventListener('click', () => {
+    alert('Atención: Esta acción borrará todas las entradas acumuladas de Octubre 2024 y restablecerá los importes a la plantilla original.');
+  });
+
+  document.getElementById('btn-cerrar-mes')?.addEventListener('click', () => {
+    alert('Octubre 2024 cerrado correctamente. El balance neto final (+1.434,40 €) ha sido transferido a Histórico y sincronizado en Google Drive.');
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="panel" href="index.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-md text-label-md mt-0.5">Panel</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="mes-en-curso" href="mes-en-curso.html"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-md text-label-md mt-0.5">Mes en Curso</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto.html"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-md text-label-md mt-0.5">Presupuesto</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="historico" href="historico.html"><span class="material-symbols-outlined text-[22px]">manage_history</span><span class="font-label-md text-label-md mt-0.5">Histórico</span></a></div></nav></body></html>

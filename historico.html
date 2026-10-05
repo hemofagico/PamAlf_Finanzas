@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+
+<html lang="es"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "primary-container": "#008378", "secondary-fixed": "#dae2fd", "error-container": "#ffdad6", "primary": "#00685f", "outline": "#6d7a77", "surface-container-highest": "#d3e4fe", "on-tertiary": "#ffffff", "surface-variant": "#d3e4fe", "background": "#f8f9ff", "inverse-primary": "#6bd8cb", "on-primary-fixed": "#00201d", "surface-container-high": "#dce9ff", "secondary-container": "#dae2fd", "on-tertiary-container": "#fffbff", "on-error": "#ffffff", "surface": "#f8f9ff", "on-primary-fixed-variant": "#005049", "surface-container-lowest": "#ffffff", "error": "#ba1a1a", "secondary-fixed-dim": "#bec6e0", "secondary": "#565e74", "on-secondary-container": "#5c647a", "on-primary-container": "#f4fffc", "primary-fixed-dim": "#6bd8cb", "surface-dim": "#cbdbf5", "on-surface": "#0b1c30", "on-tertiary-fixed": "#2a1700", "on-secondary": "#ffffff", "tertiary-container": "#a36700", "on-secondary-fixed": "#131b2e", "on-secondary-fixed-variant": "#3f465c", "on-surface-variant": "#3d4947", "on-background": "#0b1c30", "tertiary": "#825100", "on-tertiary-fixed-variant": "#653e00", "surface-container-low": "#eff4ff", "tertiary-fixed-dim": "#ffb95f", "primary-fixed": "#89f5e7", "outline-variant": "#bcc9c6", "on-primary": "#ffffff", "inverse-on-surface": "#eaf1ff", "tertiary-fixed": "#ffddb8", "on-error-container": "#93000a", "surface-bright": "#f8f9ff", "inverse-surface": "#213145", "surface-container": "#e5eeff", "surface-tint": "#006a61" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "space-lg": "1.25rem", "space-md": "0.75rem", "space-xl": "2rem", "space-sm": "0.5rem", "gutter-desktop": "1.5rem", "space-xs": "0.25rem", "margin-desktop": "2.5rem", "margin": "1rem", "margin-tablet": "1.5rem", "gutter": "1rem" }, fontFamily: { "metric-display": ["Manrope"], "headline-xl-mobile": ["Manrope"], "headline-lg": ["Manrope"], "metric-display-mobile": ["Manrope"], "headline-xl": ["Manrope"], "label-lg": ["Hanken Grotesk"], "body-lg": ["Manrope"], "body-md": ["Manrope"], "body-sm": ["Manrope"], "label-md": ["Hanken Grotesk"], "headline-md": ["Manrope"], "label-caps": ["Hanken Grotesk"], "headline-lg-mobile": ["Manrope"] }, fontSize: { "metric-display": ["2rem", { lineHeight: "2.25rem", letterSpacing: "-0.03em", fontWeight: "700" }], "headline-xl-mobile": ["1.75rem", { lineHeight: "2.25rem", letterSpacing: "-0.02em", fontWeight: "700" }], "headline-lg": ["1.75rem", { lineHeight: "2.25rem", letterSpacing: "-0.02em", fontWeight: "600" }], "metric-display-mobile": ["1.5rem", { lineHeight: "1.875rem", letterSpacing: "-0.025em", fontWeight: "700" }], "headline-xl": ["2.25rem", { lineHeight: "2.75rem", letterSpacing: "-0.025em", fontWeight: "700" }], "label-lg": ["0.875rem", { lineHeight: "1.25rem", letterSpacing: "0.01em", fontWeight: "600" }], "body-lg": ["1rem", { lineHeight: "1.5rem", letterSpacing: "-0.005em", fontWeight: "400" }], "body-md": ["0.875rem", { lineHeight: "1.375rem", letterSpacing: "0em", fontWeight: "400" }], "body-sm": ["0.75rem", { lineHeight: "1.125rem", letterSpacing: "0.01em", fontWeight: "400" }], "label-md": ["0.75rem", { lineHeight: "1rem", letterSpacing: "0.025em", fontWeight: "600" }], "headline-md": ["1.25rem", { lineHeight: "1.75rem", letterSpacing: "-0.01em", fontWeight: "600" }], "label-caps": ["0.6875rem", { lineHeight: "0.875rem", letterSpacing: "0.06em", fontWeight: "700" }], "headline-lg-mobile": ["1.375rem", { lineHeight: "1.75rem", letterSpacing: "-0.015em", fontWeight: "600" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;background-color:#f8f9ff;}body{overscroll-behavior:none;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Finanzas Claras Logo" class="h-8 w-auto object-contain flex-shrink-0" src="screen_logo.png"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-on-surface truncate">Finanzas Claras</span><span class="font-label-caps text-label-caps text-on-surface-variant font-normal hidden xs:inline">• Histórico</span></div><div class="flex items-center gap-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-caps text-label-caps text-primary truncate">Drive sincronizado (2)</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Estado de sincronización Drive" class="w-11 h-11 flex items-center justify-center rounded-full text-primary hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">cloud_done</span></button><div class="relative flex items-center justify-center p-0.5 rounded-full bg-secondary-container"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ264MjA5E1oby9sCK0PXSZDe5YkX2gv4d4TP-kuPRdSIO3vwoSeqyq_jpddfpCND52FaBXEIF8s7a1xxXVTx3Rrb8pY6u3jFjnMB5W5VydybYP1UoS6UtEFcHwyyy5HX4-4BpxHVD4GIEvnBZD2iECrcW9j4zuceBZzvwQ2d4P-lDbFm94lMT66K-QLtwB-bzIczlTephUiqRVwkz20NkTPP5_PRVzSsOa6rS-M0blePotPxEwvUbRA"/><span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-primary rounded-full ring-2 ring-surface flex items-center justify-center"><span class="material-symbols-outlined text-[8px] text-on-primary">group</span></span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="px-margin py-space-md flex flex-col gap-space-lg">
+<!-- Top Shared Cloud Storage Hub -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-center gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-primary-fixed flex items-center justify-center flex-shrink-0 text-on-primary-fixed">
+<span class="material-symbols-outlined text-[22px]">cloud_sync</span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Almacenamiento Cloud</span>
+<span class="font-label-lg text-label-lg text-on-surface truncate">Carpeta compartida hogar / data.json</span>
+</div>
+</div>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-full bg-surface-container text-on-surface-variant font-label-md text-label-md flex-shrink-0">
+<span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+          Activo
+        </span>
+</div>
+<!-- Live Partner Synchronization Status -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-xs">
+<div class="flex items-center justify-between">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Conexión en pareja</span>
+<span class="font-label-caps text-label-caps text-primary">Cifrado de extremo a extremo</span>
+</div>
+<div class="grid grid-cols-2 gap-space-xs pt-1">
+<!-- Elena's status -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest p-2 rounded-md">
+<div class="relative flex-shrink-0">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait photo of Elena smiling warmly, wearing a soft teal sweater in a bright Scandinavian home office, soft natural window lighting, clean modern domestic vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD2l0AUh_iX1ubAE-uUL6OmxwVd9pW2kc7VHsfWbQBk2p2UXkW50QliWpG4D9A6lH6PD5NCFC3PjOfBH9kD5uafFZUb8kZQUrdT-uyaWNOnVjqiEQylgh8aFXcXWFnMrplu-H0Iu4KPiA_m4CJW3U0v7m2nDbtlSQl-9i-pBUd7AeoW9u8g3HJxTYHGynv1Fzl7h5Z9jR9ek4GPe8uVaBtSXqeON8EblZvPMeK4dDG-5tIinuNK5lGaQg"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-2 h-2 bg-primary rounded-full"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Elena</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Sinc. hace 4 min</span>
+</div>
+</div>
+<!-- Carlos' status -->
+<div class="flex items-center gap-space-xs bg-surface-container-lowest p-2 rounded-md">
+<div class="relative flex-shrink-0">
+<img class="w-7 h-7 rounded-full object-cover" data-alt="Portrait photo of Carlos sitting in a warm wooden kitchen with a morning coffee, gentle warm lighting, casual and friendly, matching natural palette" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMwMcSry8daRl3KCm7B0mkxhhSMXUZBtZxPmnCcHu38IwHD1uYbi0DZV7VbgBheqo8tDHuvaEsfGliCur1fj36G25U1qP07EChv5_vBuCMDvFP7sMQA7EWcdekCrhsF0MUeT-8c_yXvVW2TipfnECAZsUGbitagO-0lOEuDti19bUnTybC6opKeb8LGUQOoPVwp0iYPZT2J8E7gj-gUR6WfBDdBCEcpbaPRZbjxoG8jlnJpE3dYOpAvA"/>
+<span class="absolute -bottom-0.5 -right-0.5 w-2 h-2 bg-primary rounded-full"></span>
+</div>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface truncate">Carlos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Sinc. ahora mismo</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Sync Button & Last Timestamp -->
+<div class="flex flex-col gap-space-xs">
+<button class="w-full h-12 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center justify-center gap-space-sm active:scale-[0.98] transition-transform shadow-sm" id="sync-now-btn" type="button">
+<span class="material-symbols-outlined text-[20px]" id="sync-icon">sync</span>
+<span id="sync-text">Sincronizar ahora con la nube</span>
+</button>
+<div class="flex items-center justify-center gap-1.5 pt-0.5">
+<span class="material-symbols-outlined text-[14px] text-on-surface-variant">schedule</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Última actualización: Hoy, 18:42</span>
+</div>
+</div>
+</section>
+<!-- Data Actions Center (Export / Import) -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Centro de Datos &amp; Respaldos</h2>
+<span class="font-label-caps text-label-caps text-secondary">Formato CSV Universal</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Export Button -->
+<button class="bg-surface-container-lowest hover:bg-surface-container-low rounded-xl p-space-md flex flex-col items-start gap-space-xs text-left shadow-sm transition-colors group" id="open-export-modal" type="button">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-primary flex items-center justify-center group-hover:bg-primary group-hover:text-on-primary transition-colors">
+<span class="material-symbols-outlined text-[22px]">file_download</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface mt-1">Exportar a CSV</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Descarga completa o mensual de partidas</span>
+</button>
+<!-- Import Button -->
+<button class="bg-surface-container-lowest hover:bg-surface-container-low rounded-xl p-space-md flex flex-col items-start gap-space-xs text-left shadow-sm transition-colors group relative overflow-hidden" id="import-btn" type="button">
+<div class="w-9 h-9 rounded-lg bg-surface-container-high text-secondary flex items-center justify-center group-hover:bg-secondary group-hover:text-on-secondary transition-colors">
+<span class="material-symbols-outlined text-[22px]">upload_file</span>
+</div>
+<span class="font-label-lg text-label-lg text-on-surface mt-1">Importar CSV</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant line-clamp-2">Restaurar históricos y gastos</span>
+<input accept=".csv" class="absolute inset-0 opacity-0 cursor-pointer" id="csv-file-input" type="file"/>
+</button>
+</div>
+<!-- Quick Export Selector Pills (Hidden drawer toggleable via export button) -->
+<div class="hidden bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-sm" id="export-options-drawer">
+<div class="flex items-center justify-between">
+<span class="font-label-lg text-label-lg text-on-surface">Selecciona qué descargar</span>
+<button class="w-7 h-7 rounded-full bg-surface-container flex items-center justify-center text-on-surface-variant" id="close-export-drawer" type="button">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<div class="flex flex-col gap-space-xs">
+<button class="w-full py-2.5 px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-left flex items-center justify-between" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">inventory_2</span>
+<span class="font-label-md text-label-md text-on-surface">Histórico completo de cierres (2023 - 2024)</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary">.CSV</span>
+</button>
+<button class="w-full py-2.5 px-space-sm rounded-lg bg-surface-container-low hover:bg-surface-container text-left flex items-center justify-between" type="button">
+<div class="flex items-center gap-space-xs">
+<span class="material-symbols-outlined text-primary text-[18px]">calendar_month</span>
+<span class="font-label-md text-label-md text-on-surface">Solo último trimestre cerrado (Q3 2024)</span>
+</div>
+<span class="font-label-caps text-label-caps text-primary">.CSV</span>
+</button>
+</div>
+</div>
+</section>
+<!-- List of Closed and Historified Months -->
+<section class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between px-1">
+<h2 class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-wider">Cierres Mensuales Historificados</h2>
+<span class="font-label-md text-label-md text-primary font-bold">4 meses auditados</span>
+</div>
+<!-- Month 1: Septiembre 2024 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden month-card">
+<button class="w-full p-space-md flex flex-col gap-space-xs text-left toggle-month-btn" type="button">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">task_alt</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Septiembre 2024</span>
+<span class="font-label-caps text-label-caps text-primary">Cierre automático liquidado</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">+1.139,55 €</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Ahorro conjunto</span>
+</div>
+</div>
+<!-- Progress Mini Bar -->
+<div class="w-full mt-2 flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Ejecución del presupuesto</span>
+<span class="font-semibold text-on-surface">76% (Bajo control)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 76%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-center pt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200 chevron-icon">expand_more</span>
+</div>
+</button>
+<!-- Collapsible Details -->
+<div class="month-content hidden px-space-md pb-space-md pt-0 flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-lg p-space-sm grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Ingresos totales</span>
+<span class="font-label-lg text-label-lg text-on-surface">4.850,00 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Elena: 2.450 € · Carlos: 2.400 €</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Gastos consolidados</span>
+<span class="font-label-lg text-label-lg text-on-surface">3.710,45 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Presupuestado: 4.200 €</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pt-1">
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              Ver desglose
+            </button>
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+              Exportar mes
+            </button>
+</div>
+</div>
+</div>
+<!-- Month 2: Agosto 2024 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden month-card">
+<button class="w-full p-space-md flex flex-col gap-space-xs text-left toggle-month-btn" type="button">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Agosto 2024</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Mes de vacaciones</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">+730,00 €</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Ahorro conjunto</span>
+</div>
+</div>
+<div class="w-full mt-2 flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Ejecución del presupuesto</span>
+<span class="font-semibold text-tertiary">89% (Límite vacacional)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-tertiary-container rounded-full" style="width: 89%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-center pt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200 chevron-icon">expand_more</span>
+</div>
+</button>
+<div class="month-content hidden px-space-md pb-space-md pt-0 flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-lg p-space-sm grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Ingresos totales</span>
+<span class="font-label-lg text-label-lg text-on-surface">4.850,00 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Elena: 2.450 € · Carlos: 2.400 €</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Gastos consolidados</span>
+<span class="font-label-lg text-label-lg text-on-surface">4.120,00 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Desvío: Viaje Asturias</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pt-1">
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              Ver desglose
+            </button>
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+              Exportar mes
+            </button>
+</div>
+</div>
+</div>
+<!-- Month 3: Julio 2024 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden month-card">
+<button class="w-full p-space-md flex flex-col gap-space-xs text-left toggle-month-btn" type="button">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Julio 2024</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Récord de ahorro</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">+1.250,00 €</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Ahorro conjunto</span>
+</div>
+</div>
+<div class="w-full mt-2 flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Ejecución del presupuesto</span>
+<span class="font-semibold text-primary">72% (Óptimo)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 72%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-center pt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200 chevron-icon">expand_more</span>
+</div>
+</button>
+<div class="month-content hidden px-space-md pb-space-md pt-0 flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-lg p-space-sm grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Ingresos totales</span>
+<span class="font-label-lg text-label-lg text-on-surface">4.950,00 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">+100 € extra Carlos</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Gastos consolidados</span>
+<span class="font-label-lg text-label-lg text-on-surface">3.700,00 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Suministros reducidos</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pt-1">
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              Ver desglose
+            </button>
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+              Exportar mes
+            </button>
+</div>
+</div>
+</div>
+<!-- Month 4: Junio 2024 -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden month-card">
+<button class="w-full p-space-md flex flex-col gap-space-xs text-left toggle-month-btn" type="button">
+<div class="flex items-start justify-between gap-space-xs">
+<div class="flex items-center gap-space-xs">
+<div class="w-8 h-8 rounded-full bg-secondary-container flex items-center justify-center text-on-secondary-container">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Junio 2024</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Cierre consolidado</span>
+</div>
+</div>
+<div class="flex flex-col items-end">
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">+890,20 €</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant">Ahorro conjunto</span>
+</div>
+</div>
+<div class="w-full mt-2 flex flex-col gap-1">
+<div class="flex justify-between items-center text-body-sm font-body-sm text-on-surface-variant">
+<span>Ejecución del presupuesto</span>
+<span class="font-semibold text-on-surface">81% (Regular)</span>
+</div>
+<div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
+<div class="h-full bg-primary rounded-full" style="width: 81%;"></div>
+</div>
+</div>
+<div class="flex items-center justify-center pt-1 text-on-surface-variant">
+<span class="material-symbols-outlined text-[20px] transition-transform duration-200 chevron-icon">expand_more</span>
+</div>
+</button>
+<div class="month-content hidden px-space-md pb-space-md pt-0 flex flex-col gap-space-md">
+<div class="bg-surface-container-low rounded-lg p-space-sm grid grid-cols-2 gap-space-sm">
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Ingresos totales</span>
+<span class="font-label-lg text-label-lg text-on-surface">4.850,00 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Nóminas regulares</span>
+</div>
+<div class="flex flex-col">
+<span class="font-label-caps text-label-caps text-on-surface-variant">Gastos consolidados</span>
+<span class="font-label-lg text-label-lg text-on-surface">3.959,80 €</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Seguro del coche anual</span>
+</div>
+</div>
+<div class="flex items-center justify-between gap-space-xs pt-1">
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container text-on-surface font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">visibility</span>
+              Ver desglose
+            </button>
+<button class="flex-1 py-2 px-space-sm rounded-lg bg-surface-container-high text-primary font-label-md text-label-md flex items-center justify-center gap-1 hover:bg-primary hover:text-on-primary transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">download</span>
+              Exportar mes
+            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Android PWA Installation Guide Section -->
+<section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm flex flex-col gap-space-md">
+<div class="flex items-center gap-space-sm">
+<div class="w-10 h-10 rounded-full bg-secondary-container text-secondary flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-[24px]">android</span>
+</div>
+<div class="flex flex-col">
+<span class="font-headline-md text-headline-md text-on-surface">Instalar en tu móvil Android</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Acceso directo como app para Elena y Carlos</span>
+</div>
+</div>
+<!-- Quick Steps in visual cards -->
+<div class="bg-surface-container-low rounded-lg p-space-sm flex flex-col gap-space-sm">
+<div class="flex items-start gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps flex items-center justify-center flex-shrink-0 mt-0.5">1</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Abre Chrome en vuestro Android</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pulsa en el menú superior derecho de tres puntos <span class="material-symbols-outlined text-[14px] align-middle">more_vert</span></span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps flex items-center justify-center flex-shrink-0 mt-0.5">2</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">Añadir a pantalla de inicio</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Selecciona 'Instalar aplicación' o 'Añadir a pantalla de inicio'</span>
+</div>
+</div>
+<div class="flex items-start gap-space-sm">
+<span class="w-5 h-5 rounded-full bg-primary text-on-primary font-label-caps text-label-caps flex items-center justify-center flex-shrink-0 mt-0.5">3</span>
+<div class="flex flex-col">
+<span class="font-label-md text-label-md text-on-surface">¡Listo para usar a pantalla completa!</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Icono directo sin barras de navegador y con carga instantánea</span>
+</div>
+</div>
+</div>
+<div class="flex items-center gap-space-xs p-space-xs bg-surface-container-high rounded-lg text-primary">
+<span class="material-symbols-outlined text-[18px]">offline_bolt</span>
+<span class="font-label-md text-label-md">Soporta registro de gastos sin conexión en la compra</span>
+</div>
+</section>
+</div>
+</div>
+<script>
+  // Accordion behavior for monthly summaries
+  document.querySelectorAll('.toggle-month-btn').forEach(button => {
+    button.addEventListener('click', () => {
+      const parentCard = button.closest('.month-card');
+      const content = parentCard.querySelector('.month-content');
+      const chevron = button.querySelector('.chevron-icon');
+      const isHidden = content.classList.contains('hidden');
+
+      if (isHidden) {
+        content.classList.remove('hidden');
+        chevron.style.transform = 'rotate(180deg)';
+      } else {
+        content.classList.add('hidden');
+        chevron.style.transform = 'rotate(0deg)';
+      }
+    });
+  });
+
+  // Sync button micro-interaction
+  const syncBtn = document.getElementById('sync-now-btn');
+  const syncIcon = document.getElementById('sync-icon');
+  const syncText = document.getElementById('sync-text');
+
+  if (syncBtn) {
+    syncBtn.addEventListener('click', () => {
+      syncIcon.classList.add('animate-spin');
+      syncText.textContent = 'Sincronizando con Drive...';
+      syncBtn.disabled = true;
+
+      setTimeout(() => {
+        syncIcon.classList.remove('animate-spin');
+        syncIcon.textContent = 'done_all';
+        syncText.textContent = '¡Sincronizado con éxito!';
+        
+        setTimeout(() => {
+          syncIcon.textContent = 'sync';
+          syncText.textContent = 'Sincronizar ahora con la nube';
+          syncBtn.disabled = false;
+        }, 2200);
+      }, 1500);
+    });
+  }
+
+  // Export options toggle
+  const exportOpenBtn = document.getElementById('open-export-modal');
+  const exportDrawer = document.getElementById('export-options-drawer');
+  const exportCloseBtn = document.getElementById('close-export-drawer');
+
+  if (exportOpenBtn && exportDrawer) {
+    exportOpenBtn.addEventListener('click', () => {
+      exportDrawer.classList.toggle('hidden');
+    });
+  }
+
+  if (exportCloseBtn && exportDrawer) {
+    exportCloseBtn.addEventListener('click', () => {
+      exportDrawer.classList.add('hidden');
+    });
+  }
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="panel" href="index.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-md text-label-md mt-0.5">Panel</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="mes-en-curso" href="mes-en-curso.html"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-md text-label-md mt-0.5">Mes en Curso</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto.html"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-md text-label-md mt-0.5">Presupuesto</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="historico" href="historico.html"><span class="material-symbols-outlined text-[22px]">manage_history</span><span class="font-label-md text-label-md mt-0.5">Histórico</span></a></div></nav></body></html>
