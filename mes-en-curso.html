@@ -141,7 +141,7 @@
 <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
 <div class="h-16 px-margin flex items-center justify-between gap-space-sm">
 <div class="flex items-center gap-space-sm min-w-0">
-<img alt="Finanzas Claras Logo" class="h-8 w-auto object-contain flex-shrink-0" onerror="this.src='https://lh3.googleusercontent.com/aida/AEtjO1VrOz8-qRmrF7v89p5DZVz-BEqfHctph7i6k91pJH0UTHLENZgTm6U1TFXmtBbfQuLlqhtwOCBXl_PuDrLBcm1HG4p9cD4gcxsvDwiCFkRpBrtj8FTQLYPdQHO8hwMz2IPResqK6tvE4wNlV1VGXvDVJYBT_4XmlaT9Cvi4k42Kwc3bBoXYoyS8an5rODY_LC93u7-ermdocGE4X5pFNQcxPgCvyRWoGFayxoV_SYWjcDoUntcBH27Wcc8r'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB9jTZDNZ_5J0avDAnqPqc7NyXgcRGwp2ezMnDrF-bFS5aK7US7b_wu8XtFh9jGOzkYseKhYGDXbt8ZFI36QxoQUVbGznB18LwTZOFvKH3FdTu6ciiguSu_ciheixMyAx9SkKuZ7xtQ0nKHKVGCGzxciHMGfjEIJ5zGyRS6p6tv-Q8EvqNldM0s7gekAHkkGaHFY-qUdndt3La7x0j8_IdPy0uLupi1njwHT1qPc_-n"/>
+<img alt="Finanzas Claras Logo" class="h-8 w-auto object-contain flex-shrink-0" onerror="this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuB9jTZDNZ_5J0avDAnqPqc7NyXgcRGwp2ezMnDrF-bFS5aK7US7b_wu8XtFh9jGOzkYseKhYGDXbt8ZFI36QxoQUVbGznB18LwTZOFvKH3FdTu6ciiguSu_ciheixMyAx9SkKuZ7xtQ0nKHKVGCGzxciHMGfjEIJ5zGyRS6p6tv-Q8EvqNldM0s7gekAHkkGaHFY-qUdndt3La7x0j8_IdPy0uLupi1njwHT1qPc_-n'" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-mVSTxVEKQLoKSdK23dNMQGOMmp8VgrUYcs6W-rcP1SSmus_IpYqJ_fxcr5wGle1aADzAgMvmRWZhQKnWG9LZnRFJzBcEbTbPiuJO10xXKSPpaBpVsMLYWP53Nnc62p__7srQRwB662LB90dgYKFtjPjzSD_yeHVf-vz9nVhdm48UFXER0u1oytmb74VpfzA9QsAqEbmfNRsUrK1kuVNeUCuPyt5e-TBg2mwhllYp"/>
 <div class="flex flex-col min-w-0">
 <div class="flex items-center gap-space-xs">
 <span class="font-headline-md text-headline-md text-on-surface truncate">Finanzas Claras</span>
@@ -190,7 +190,7 @@
 <div class="bg-surface-container-low rounded-lg p-2.5 flex items-start gap-2 border border-outline-variant/20">
 <span class="material-symbols-outlined text-secondary text-[18px] mt-0.5 flex-shrink-0">info</span>
 <p class="font-body-sm text-body-sm text-on-surface-variant leading-tight" id="aviso-cierre">
-            Ciclo activo. Los tickets añadidos por Pamella y Alfonsso actualizan el saldo en tiempo real.
+            Ciclo activo. Los tickets y facturas reales añadidos por Pamella y Alfonsso actualizan el saldo en tiempo real.
           </p>
 </div>
 <!-- Botonera de Gestión de Mes -->
@@ -264,7 +264,12 @@
 </div>
 <div class="text-right">
 <span class="font-headline-md text-headline-md text-on-surface tabular-nums font-bold" id="total-otros">0,00 €</span>
+<div class="flex items-center justify-end gap-1.5 mt-0.5">
+<button class="text-[11px] text-primary hover:underline font-label-md flex items-center" onclick="openModalForPartida('otros')" type="button">
++ ticket
+</button>
 <div class="font-body-sm text-body-sm text-on-surface-variant" id="count-otros">0 tickets</div>
+</div>
 </div>
 </div>
 <!-- Lista de entradas en Otros -->
@@ -274,17 +279,17 @@
           </div>
 </div>
 </section>
-<!-- GASTOS FIJOS Y SUMINISTROS (HEREDADOS DE PRESUPUESTO) -->
+<!-- GASTOS FIJOS Y SUMINISTROS (HEREDADOS DE PRESUPUESTO + EDITABLES Y FACTURABLES) -->
 <section class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm space-y-space-sm border border-outline-variant/30">
 <div class="flex items-center justify-between mb-1">
 <div>
 <h3 class="font-headline-md text-headline-md text-on-surface">Gastos Fijos y Suministros</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Plantilla configurada en Presupuesto</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Facturas reales e importes pagados este mes</p>
 </div>
-<span class="font-label-caps text-label-caps text-primary bg-primary/10 px-2 py-0.5 rounded-full font-bold">Fijos</span>
+<span class="font-label-caps text-label-caps text-primary bg-primary/10 px-2 py-0.5 rounded-full font-bold">Fijos y Facturas</span>
 </div>
 <div class="space-y-2" id="container-gastos-fijos">
-<!-- Renderizado dinámico -->
+<!-- Renderizado dinámico con botón + factura/importe y desglose de facturas -->
 </div>
 </section>
 <!-- Resumen de Cierre y Sincronización -->
@@ -303,18 +308,18 @@
 </section>
 </div>
 </main>
-<!-- MODAL POP-UP: AÑADIR ENTRADA -->
+<!-- MODAL POP-UP: AÑADIR ENTRADA O FACTURA -->
 <div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-on-surface/40 backdrop-blur-sm hidden" id="modal-nuevo-gasto">
 <div class="w-full sm:max-w-md bg-surface-container-lowest rounded-t-2xl sm:rounded-2xl p-space-md shadow-2xl space-y-space-md animate-in fade-in slide-in-from-bottom duration-200">
 <!-- Encabezado Modal -->
 <div class="flex items-center justify-between pb-1 border-b border-outline-variant/30">
 <div class="flex items-center gap-2">
 <div class="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-<span class="material-symbols-outlined text-[20px]">receipt_long</span>
+<span class="material-symbols-outlined text-[20px]" id="modal-header-icon">receipt_long</span>
 </div>
 <div>
-<h3 class="font-headline-md text-headline-md text-on-surface">Añadir Entrada</h3>
-<p class="font-body-sm text-body-sm text-on-surface-variant">Registro rápido de ticket</p>
+<h3 class="font-headline-md text-headline-md text-on-surface" id="modal-title">Añadir Entrada / Factura</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Registro rápido de ticket o factura</p>
 </div>
 </div>
 <button class="w-8 h-8 rounded-full bg-surface-container hover:bg-surface-container-high flex items-center justify-center text-on-surface" id="btn-close-modal" type="button">
@@ -336,16 +341,16 @@
 <label class="block font-label-md text-label-md text-on-surface-variant mb-1">Concepto / Descripción</label>
 <div class="flex items-center bg-surface-container-low rounded-lg px-3 h-11 border border-outline-variant/30 focus-within:border-primary">
 <span class="material-symbols-outlined text-outline text-[18px] mr-2">description</span>
-<input class="bg-transparent text-on-surface w-full font-body-md text-body-md focus:outline-none" id="input-concepto" placeholder="Ej. Compra semanal supermercado" required="" type="text"/>
+<input class="bg-transparent text-on-surface w-full font-body-md text-body-md focus:outline-none" id="input-concepto" placeholder="Ej. Factura Luz Iberdrola o Compra Mercadona" required="" type="text"/>
 </div>
 </div>
-<!-- Categoría / Partida Asociada -->
+<!-- Categoría / Partida Asociada (Incluye Vida Diaria, Fijos, Suministros y Otros) -->
 <div>
 <label class="block font-label-md text-label-md text-on-surface-variant mb-1">Categoría / Partida</label>
 <div class="flex items-center bg-surface-container-low rounded-lg px-3 h-11 border border-outline-variant/30 focus-within:border-primary">
 <span class="material-symbols-outlined text-outline text-[18px] mr-2">category</span>
-<select class="bg-transparent text-on-surface w-full font-body-md text-body-md focus:outline-none capitalize" id="select-partida">
-<!-- Opciones dinámicas -->
+<select class="bg-transparent text-on-surface w-full font-body-md text-body-md focus:outline-none" id="select-partida">
+<!-- Opciones dinámicas agrupadas (Vida Diaria + Fijos/Suministros + Otros) -->
 </select>
 </div>
 </div>
@@ -477,7 +482,7 @@
       presupuesto = JSON.parse(JSON.stringify(fallbackPresupuesto));
     }
 
-    // Cargar Tickets del mes actual
+    // Cargar Tickets y Facturas del mes actual
     function loadTickets() {
       try {
         const stored = localStorage.getItem('finanzas_tickets_mes') || localStorage.getItem('tickets_mes') || localStorage.getItem('fc_tickets_mes_actual');
@@ -514,18 +519,48 @@
     };
 
     // Función para abrir modal preseleccionando una categoría específica
-    window.openModalForPartida = function(partidaId) {
+    window.openModalForPartida = function(partidaId, sugerenciaConcepto = '') {
       openModal();
       const select = document.getElementById('select-partida');
       if (select && partidaId) {
         select.value = partidaId;
       }
+      const conceptoInput = document.getElementById('input-concepto');
+      if (conceptoInput && sugerenciaConcepto) {
+        conceptoInput.value = sugerenciaConcepto;
+      }
     };
+
+    // Poblar el selector de categorías del modal con Vida Diaria, Fijos/Suministros y Otros
+    function populateCategorySelect() {
+      const selectPartida = document.getElementById('select-partida');
+      if (!selectPartida) return;
+
+      let html = '<optgroup label="Vida Diaria (Tickets)">';
+      (presupuesto.partidas || []).forEach(p => {
+        html += `<option value="${p.id}">${p.nombre}</option>`;
+      });
+      html += '</optgroup>';
+
+      html += '<optgroup label="Gastos Fijos y Suministros (Facturas / Cuotas)">';
+      (presupuesto.fijos || []).forEach(f => {
+        html += `<option value="fijo_${f.id}">${f.nombre}</option>`;
+      });
+      html += '</optgroup>';
+
+      html += '<optgroup label="Otros / Extra">';
+      html += '<option value="otros">Otros / Imprevistos</option>';
+      html += '</optgroup>';
+
+      selectPartida.innerHTML = html;
+    }
 
     // Renderizar toda la interfaz con datos 100% dinámicos
     function renderAll() {
       document.getElementById('label-mes-actual').textContent = currentMonthName;
       document.getElementById('kpi-ingresos').textContent = formatEur(presupuesto.ingresos);
+
+      populateCategorySelect();
 
       const vdContainer = document.getElementById('container-vida-diaria');
       vdContainer.innerHTML = '';
@@ -534,9 +569,10 @@
       const categoryTotals = {};
 
       (presupuesto.partidas || []).forEach(p => { categoryTotals[p.id] = 0; });
+      (presupuesto.fijos || []).forEach(f => { categoryTotals['fijo_' + f.id] = 0; });
       categoryTotals['otros'] = 0;
 
-      // Calcular sumas de tickets acumulados
+      // Calcular sumas de tickets y facturas acumuladas
       tickets.forEach(t => {
         const cat = t.categoria || 'otros';
         const val = parseFloat(t.importe) || 0;
@@ -545,10 +581,14 @@
         } else {
           categoryTotals['otros'] = (categoryTotals['otros'] || 0) + val;
         }
-        totalVariableGastos += val;
+
+        // Si no es un gasto fijo, se suma al total variable
+        if (!cat.startsWith('fijo_')) {
+          totalVariableGastos += val;
+        }
       });
 
-      // Renderizar cada partida de Vida Diaria
+      // 1. Renderizar cada partida de Vida Diaria
       (presupuesto.partidas || []).forEach((p, idx) => {
         const spent = categoryTotals[p.id] || 0;
         const limit = parseFloat(p.limite) || 0;
@@ -627,7 +667,7 @@
         vdContainer.appendChild(card);
       });
 
-      // Renderizar sección Otros / Imprevistos
+      // 2. Renderizar sección Otros / Imprevistos
       const otrosSpent = categoryTotals['otros'] || 0;
       const otrosTickets = tickets.filter(t => (t.categoria === 'otros' || !t.categoria));
       document.getElementById('total-otros').textContent = formatEur(otrosSpent);
@@ -637,7 +677,7 @@
       if (otrosTickets.length === 0) {
         detailsOtros.innerHTML = `
           <div class="py-3 px-2 text-center text-on-surface-variant font-body-sm bg-surface-container-low rounded-lg">
-            No hay imprevistos registrados este mes. Pulsa '+ Añadir Entrada' para añadir uno.
+            No hay imprevistos registrados este mes. Pulsa '+ ticket' o '+ Añadir Entrada' para añadir uno.
           </div>
         `;
       } else {
@@ -665,33 +705,94 @@
         }).join('');
       }
 
-      // Renderizar Gastos Fijos
+      // 3. Renderizar Gastos Fijos y Suministros (CON INGRESO DE DATOS Y FACTURAS REALES)
       const fixedContainer = document.getElementById('container-gastos-fijos');
       fixedContainer.innerHTML = '';
-      let totalFixed = 0;
+      let grandTotalFixedReal = 0;
+
       (presupuesto.fijos || []).forEach(f => {
-        const imp = parseFloat(f.importe) || 0;
-        totalFixed += imp;
+        const catKey = 'fijo_' + f.id;
+        const catInvoices = tickets.filter(t => t.categoria === catKey);
+        const hasRealData = catInvoices.length > 0;
+        const totalRealPaid = categoryTotals[catKey] || 0;
+        const plantillaImporte = parseFloat(f.importe) || 0;
+
+        // Si se han registrado facturas reales este mes, tomamos ese importe; sino, la referencia/plantilla de Presupuesto
+        const effectiveAmount = hasRealData ? totalRealPaid : plantillaImporte;
+        grandTotalFixedReal += effectiveAmount;
+
         const row = document.createElement('div');
-        row.className = 'flex items-center justify-between py-2 px-3 rounded-lg bg-surface-container-low border border-outline-variant/15';
+        row.className = 'rounded-xl bg-surface-container-low p-space-sm space-y-space-xs border border-outline-variant/20';
+
+        let invoiceListHTML = '';
+        if (catInvoices.length === 0) {
+          invoiceListHTML = `
+            <div class="py-2 px-3 text-center text-on-surface-variant font-body-sm bg-surface-container-lowest/60 rounded-lg">
+              Sin facturas reales añadidas este mes. Aplicando estimado de plantilla (${formatEur(plantillaImporte)}).
+            </div>
+          `;
+        } else {
+          invoiceListHTML = catInvoices.map(t => {
+            const isPamella = (t.pagadoPor || '').trim().toLowerCase() === 'pamella';
+            const badgeClass = isPamella 
+              ? 'bg-[#f43f5e]/15 text-[#e11d48] font-bold' 
+              : 'bg-primary/15 text-primary font-bold';
+            const userInitial = isPamella ? 'P' : 'A';
+            const dateStr = t.fecha ? t.fecha.split('-').slice(1).reverse().join('/') : '--/--';
+
+            return `
+              <div class="flex items-center justify-between py-1.5 px-2.5 rounded-lg bg-surface-container-lowest text-on-surface shadow-xs">
+                <div class="flex items-center gap-2 min-w-0">
+                  <span class="font-label-caps text-label-caps text-on-surface-variant w-10 shrink-0">${dateStr}</span>
+                  <span class="font-body-sm text-body-sm truncate">${t.concepto}</span>
+                  <span class="px-1.5 py-0.5 rounded text-[10px] flex items-center gap-1 ${badgeClass}">
+                    <span>${userInitial}</span>
+                    <span class="hidden xs:inline">${t.pagadoPor}</span>
+                  </span>
+                </div>
+                <span class="font-label-lg text-label-lg tabular-nums font-semibold">${formatEur(t.importe)}</span>
+              </div>
+            `;
+          }).join('');
+        }
+
         row.innerHTML = `
-          <div class="flex items-center gap-2.5 min-w-0">
-            <span class="material-symbols-outlined text-primary text-[20px] shrink-0">${f.icon || 'receipt'}</span>
-            <div class="min-w-0">
-              <span class="font-label-lg text-label-lg text-on-surface block truncate font-medium">${f.nombre}</span>
-              <span class="font-body-sm text-body-sm text-on-surface-variant block truncate">${f.subtitulo || ''}</span>
+          <div class="flex items-center justify-between gap-2">
+            <div class="flex items-center gap-2 min-w-0">
+              <button class="w-7 h-7 rounded-lg bg-surface-container-highest flex items-center justify-center text-on-surface hover:bg-surface-container transition-colors shrink-0" onclick="toggleDetails('details-fijo-${f.id}', 'icon-fijo-${f.id}')" type="button" title="Ver desglose o facturas">
+                <span class="material-symbols-outlined text-[18px]" id="icon-fijo-${f.id}">add</span>
+              </button>
+              <div class="min-w-0">
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-primary text-[18px] shrink-0">${f.icon || 'receipt'}</span>
+                  <span class="font-label-lg text-label-lg text-on-surface truncate font-semibold">${f.nombre}</span>
+                </div>
+                <span class="font-body-sm text-body-sm text-on-surface-variant truncate block">
+                  ${f.subtitulo || 'Gasto recurrente'} • Plantilla: ${formatEur(plantillaImporte)}
+                </span>
+              </div>
+            </div>
+            <div class="text-right flex flex-col items-end shrink-0">
+              <span class="font-headline-md text-headline-md tabular-nums font-bold text-on-surface">${formatEur(effectiveAmount)}</span>
+              <div class="flex items-center gap-1">
+                <button onclick="openModalForPartida('${catKey}', 'Factura ${f.nombre}')" class="text-[11px] text-primary hover:underline font-label-md flex items-center gap-0.5" type="button" title="Meter factura real o ajustar importe pagado">
+                  <span class="material-symbols-outlined text-[12px]">add</span> + factura/importe
+                </button>
+                <span class="px-1.5 py-0.5 rounded text-[10px] font-label-caps ${hasRealData ? 'bg-primary/10 text-primary font-bold' : 'bg-surface-container text-on-surface-variant'}">
+                  ${hasRealData ? 'Real' : 'Plantilla'}
+                </span>
+              </div>
             </div>
           </div>
-          <div class="text-right shrink-0">
-            <span class="font-label-lg text-label-lg text-on-surface tabular-nums font-semibold">${formatEur(imp)}</span>
-            <span class="block text-[11px] text-primary font-medium">${f.estado || 'Plantilla'}</span>
+          <div class="hidden space-y-1.5 pt-2 pl-1" id="details-fijo-${f.id}">
+            ${invoiceListHTML}
           </div>
         `;
         fixedContainer.appendChild(row);
       });
 
       // Cálculo de Totales y KPIs
-      const grandTotalGastos = totalVariableGastos + totalFixed;
+      const grandTotalGastos = totalVariableGastos + grandTotalFixedReal;
       const balance = (parseFloat(presupuesto.ingresos) || 0) - grandTotalGastos;
       const pctConsumido = (parseFloat(presupuesto.ingresos) > 0) 
         ? ((grandTotalGastos / presupuesto.ingresos) * 100).toFixed(1) 
@@ -721,17 +822,9 @@
       } else {
         footerDisp.className = 'font-headline-md text-headline-md text-primary font-bold tabular-nums';
       }
-
-      // Sincronizar desplegable del modal
-      const selectPartida = document.getElementById('select-partida');
-      if (selectPartida) {
-        selectPartida.innerHTML = (presupuesto.partidas || []).map(p => 
-          `<option value="${p.id}">${p.nombre}</option>`
-        ).join('') + '<option value="otros">Otros / Imprevistos</option>';
-      }
     }
 
-    // Modal para Añadir Entrada
+    // Modal para Añadir Entrada / Factura
     const modal = document.getElementById('modal-nuevo-gasto');
     const btnOpenModal = document.getElementById('btn-open-modal-vd');
     const btnCloseModal = document.getElementById('btn-close-modal');
@@ -755,7 +848,7 @@
     btnCancelModal?.addEventListener('click', closeModal);
     modal?.addEventListener('click', (e) => { if (e.target === modal) closeModal(); });
 
-    // Guardar nuevo ticket (Acción Add Ticket)
+    // Guardar nuevo ticket o factura (Acción Add Ticket / Factura)
     formNuevoGasto?.addEventListener('submit', (e) => {
       e.preventDefault();
       const fecha = document.getElementById('input-fecha').value;
@@ -783,7 +876,7 @@
       closeModal();
       renderAll();
 
-      notifySync(`Ticket registrado por ${pagadoPor}`);
+      notifySync(`Registro añadido por ${pagadoPor}`);
       syncPost({ action: 'add_ticket', ticket: nuevoTicket, mes: currentMonthName });
     });
 
@@ -791,7 +884,7 @@
     document.getElementById('btn-resetear-mes')?.addEventListener('click', () => {
       const confirmed = confirm(
         `¿Deseas resetear todos los gastos de ${currentMonthName}?\n\n` +
-        `• Se borrarán todos los tickets registrados por Pamella y Alfonsso.\n` +
+        `• Se borrarán todos los tickets y facturas reales registradas por Pamella y Alfonsso.\n` +
         `• Todas las partidas de Vida Diaria volverán a 0,00 €.\n` +
         `• El presupuesto base configurado se mantendrá intacto.`
       );
@@ -806,17 +899,41 @@
 
     // Cerrar Mes y Guardar (Acción Cerrar Mes)
     document.getElementById('btn-cerrar-mes')?.addEventListener('click', () => {
-      const totalTickets = tickets.reduce((acc, t) => acc + (parseFloat(t.importe) || 0), 0);
-      const totalFijos = (presupuesto.fijos || []).reduce((acc, f) => acc + (parseFloat(f.importe) || 0), 0);
-      const granTotal = totalTickets + totalFijos;
-      const saldoFinal = (parseFloat(presupuesto.ingresos) || 0) - granTotal;
+      let totalGastosMes = 0;
+
+      // Calcular sumas de variables y fijos con datos reales
+      const catTotals = {};
+      (presupuesto.partidas || []).forEach(p => { catTotals[p.id] = 0; });
+      (presupuesto.fijos || []).forEach(f => { catTotals['fijo_' + f.id] = 0; });
+      catTotals['otros'] = 0;
+
+      tickets.forEach(t => {
+        const cat = t.categoria || 'otros';
+        const val = parseFloat(t.importe) || 0;
+        if (catTotals[cat] !== undefined) {
+          catTotals[cat] += val;
+        } else {
+          catTotals['otros'] = (catTotals['otros'] || 0) + val;
+        }
+        if (!cat.startsWith('fijo_')) {
+          totalGastosMes += val;
+        }
+      });
+
+      (presupuesto.fijos || []).forEach(f => {
+        const k = 'fijo_' + f.id;
+        const real = catTotals[k] || 0;
+        totalGastosMes += (real > 0 ? real : (parseFloat(f.importe) || 0));
+      });
+
+      const saldoFinal = (parseFloat(presupuesto.ingresos) || 0) - totalGastosMes;
 
       const confirmed = confirm(
         `¿Cerrar el ciclo de ${currentMonthName}?\n\n` +
         `• Total Ingresos: ${formatEur(presupuesto.ingresos)}\n` +
-        `• Total Gastos: ${formatEur(granTotal)}\n` +
+        `• Total Gastos: ${formatEur(totalGastosMes)}\n` +
         `• Saldo Resultante: ${formatEur(saldoFinal)}\n\n` +
-        `Se archivará en el Histórico y se abrirá el siguiente mes con gastos en 0,00 €.`
+        `Se archivará en el Histórico y se abrirá el siguiente mes con tickets y facturas en 0,00 €.`
       );
       if (!confirmed) return;
 
@@ -824,7 +941,7 @@
         mes: currentMonthName,
         fechaCierre: new Date().toISOString(),
         ingresos: presupuesto.ingresos,
-        gastos: granTotal,
+        gastos: totalGastosMes,
         saldo: saldoFinal,
         ticketsCount: tickets.length,
         cerradoPor: "Pamella y Alfonsso"
@@ -897,7 +1014,7 @@
         const res = await fetch(`${API_ENDPOINT}?action=get_presupuesto`);
         if (res.ok) {
           const data = await res.json();
-          if (data && (data.partidas || data.ingresos)) {
+          if (data && (data.partidas || data.ingresos || data.fijos)) {
             presupuesto = { ...fallbackPresupuesto, ...data };
             localStorage.setItem('finanzas_presupuesto_base', JSON.stringify(presupuesto));
             localStorage.setItem('presupuesto_base', JSON.stringify(presupuesto));

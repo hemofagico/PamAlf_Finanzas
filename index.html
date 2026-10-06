@@ -7,6 +7,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700&amp;family=Hanken+Grotesk:wght@600;700&amp;display=swap" rel="stylesheet"/>
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script src="config.js"></script>
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -150,7 +151,7 @@
 <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
 <div class="h-16 px-margin flex items-center justify-between gap-space-sm">
 <div class="flex items-center gap-space-sm min-w-0">
-<img alt="Finanzas Claras Logo" class="h-8 w-auto object-contain flex-shrink-0" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida/AEtjO1VrOz8-qRmrF7v89p5DZVz-BEqfHctph7i6k91pJH0UTHLENZgTm6U1TFXmtBbfQuLlqhtwOCBXl_PuDrLBcm1HG4p9cD4gcxsvDwiCFkRpBrtj8FTQLYPdQHO8hwMz2IPResqK6tvE4wNlV1VGXvDVJYBT_4XmlaT9Cvi4k42Kwc3bBoXYoyS8an5rODY_LC93u7-ermdocGE4X5pFNQcxPgCvyRWoGFayxoV_SYWjcDoUntcBH27Wcc8r';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC7bnwKTrHDtaGSbmepeLTEdpnMfWCMtReLhtgqq46LPkkJkBw5NSi1-IwjxAW9iIUVuP-BBELiMjKKbpyK9BgWvThYDt2fv0_gXnq8s7BLLfLgpjG0bP6RjS0-GhZQlPRJLqXMnsIx1DDlCsv0zqoePo4IjNEEReLVdde-VrQYr11PjqbcMt-CQQwy8qg77FVCz5J0KPkluL_kZe26psR3nZFefyCVsqSMkkZiNnMY"/>
+<img alt="Finanzas Claras Logo" class="h-8 w-auto object-contain flex-shrink-0" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida/AEtjO1VrOz8-qRmrF7v89p5DZVz-BEqfHctph7i6k91pJH0UTHLENZgTm6U1TFXmtBbfQuLlqhtwOCBXl_PuDrLBcm1HG4p9cD4gcxsvDwiCFkRpBrtj8FTQLYPdQHO8hwMz2IPResqK6tvE4wNlV1VGXvDVJYBT_4XmlaT9Cvi4k42Kwc3bBoXYoyS8an5rODY_LC93u7-ermdocGE4X5pFNQcxPgCvyRWoGFayxoV_SYWjcDoUntcBH27Wcc8r';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4DBkkR__amxn-Kk9LxOeGCbXoa5Vhr2gRz48h5uz6m42Q8s5gDj8HhRe8mGVd8o-UnwfmA0hwHa69OFvq9X-hBx0lGztfoVqvnWd21t1CleeMsLyOvInhfUGCxGnYMinhYOqwKpgegEdGg5kWnHlV-iTCjqXFHM-HFxyXN3RXH8ESLJoCQ_6g25UDTV1ALDsSFNDqhmhXGDTPw_hlHgKRRN8SPrevx_eI2YlXXfw3"/>
 <div class="flex flex-col min-w-0">
 <div class="flex items-center gap-space-xs">
 <span class="font-headline-md text-headline-md text-on-surface truncate">Finanzas Claras</span>
@@ -185,11 +186,11 @@
 <span class="font-headline-md text-body-md font-bold text-on-surface capitalize" id="display-periodo">Cargando...</span>
 <span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
 </div>
-<!-- Segmented View Toggle (Elena, Carlos, Conjunto) -->
+<!-- Segmented View Toggle (Pamella, Alfonsso, Conjunto) -->
 <div class="flex items-center bg-surface-container p-0.5 rounded-full shadow-sm text-on-surface-variant text-label-md font-label-md" id="user-filter-group">
 <button class="px-2.5 py-1 rounded-full bg-surface text-primary shadow-xs font-bold transition-all filter-btn" data-filter="Conjunto" type="button">Conjunto</button>
-<button class="px-2 py-1 rounded-full hover:text-on-surface transition-colors filter-btn" data-filter="Elena" type="button">Elena</button>
-<button class="px-2 py-1 rounded-full hover:text-on-surface transition-colors filter-btn" data-filter="Carlos" type="button">Carlos</button>
+<button class="px-2 py-1 rounded-full hover:text-on-surface transition-colors filter-btn" data-filter="Pamella" type="button">Pamella</button>
+<button class="px-2 py-1 rounded-full hover:text-on-surface transition-colors filter-btn" data-filter="Alfonsso" type="button">Alfonsso</button>
 </div>
 </div>
 <!-- Banner Alerta Inteligente -->
@@ -217,12 +218,12 @@
 <div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse flex-shrink-0"></div>
 <div class="flex flex-col min-w-0">
 <span class="font-label-caps text-label-caps text-on-surface-variant font-bold uppercase truncate">Sincronización en vivo</span>
-<span class="font-body-sm text-body-sm text-on-surface truncate" id="sync-subtext">Drive • Conectado con Elena y Carlos</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate" id="sync-subtext">Drive • Conectado con Pamella y Alfonsso</span>
 </div>
 </div>
 <div class="flex items-center -space-x-1.5 flex-shrink-0">
-<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-caps text-label-caps font-bold ring-2 ring-surface">E</div>
-<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-caps text-label-caps font-bold ring-2 ring-surface">C</div>
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-caps text-label-caps font-bold ring-2 ring-surface">P</div>
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-caps text-label-caps font-bold ring-2 ring-surface">A</div>
 </div>
 </div>
 <!-- Tarjetas Resumen de Métricas Clave -->
@@ -282,7 +283,7 @@
 <div class="grid grid-cols-2 gap-space-sm">
 <button class="flex items-center justify-center gap-space-xs h-12 bg-primary text-on-primary rounded-xl font-label-lg text-label-lg font-bold shadow-md hover:bg-primary-container active:scale-[0.98] transition-all" id="btn-add-expense-modal" type="button">
 <span class="material-symbols-outlined text-[20px]">add_circle</span>
-<span class="truncate">Añadir Gasto</span>
+<span class="truncate">+ Añadir Gasto</span>
 </button>
 <button class="flex items-center justify-center gap-space-xs h-12 bg-surface-container-high text-on-surface rounded-xl font-label-lg text-label-lg font-bold shadow-xs hover:bg-surface-variant active:scale-[0.98] transition-all" onclick="window.location.href='mes-en-curso.html'" type="button">
 <span class="material-symbols-outlined text-[20px] text-primary">visibility</span>
@@ -317,14 +318,14 @@
 </div>
 </div>
 </div>
-<!-- Real vs Presupuestado (Barras de Progreso por Categoría) -->
+<!-- Real vs Presupuestado (Barras de Progreso por Categoría) Dinámico -->
 <div class="bg-surface-container-lowest p-space-md rounded-xl shadow-sm flex flex-col gap-space-sm">
 <div class="flex items-center justify-between">
 <h2 class="font-headline-md text-headline-md font-bold text-on-surface">Ejecución Presupuestaria</h2>
 <span class="font-label-caps text-label-caps text-primary font-bold uppercase">Gasto vs Techo</span>
 </div>
 <div class="flex flex-col gap-3" id="budget-progress-container">
-<!-- Categorías generadas por JS -->
+<!-- Categorías generadas por JS sin hardcode -->
 </div>
 </div>
 <!-- Últimos Movimientos Registrados en el Hogar -->
@@ -371,22 +372,17 @@
 <input class="w-full px-3 py-2.5 rounded-xl border border-outline-variant bg-surface text-on-surface font-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" id="input-importe" min="0.01" placeholder="0,00" required="" step="0.01" type="number"/>
 </div>
 <div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Categoría</label>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Grupo de Gasto</label>
 <select class="w-full px-3 py-2.5 rounded-xl border border-outline-variant bg-surface text-on-surface font-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" id="input-categoria">
-<option value="Vida Diaria">Vida Diaria</option>
-<option value="Vivienda">Vivienda</option>
-<option value="Suministros">Suministros</option>
-<option value="Transporte">Transporte</option>
-<option value="Fondos &amp; Vacaciones">Fondos &amp; Vacaciones</option>
-<option value="Impuestos/Otros">Impuestos/Otros</option>
+<!-- Dinámicamente llenado con los grupos del presupuesto -->
 </select>
 </div>
 </div>
 <div>
-<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Pagado por / Distribución</label>
+<label class="block font-label-md text-label-md text-on-surface-variant mb-1">Pagado por / Usuario</label>
 <div class="grid grid-cols-3 gap-2" id="selector-pagador">
-<button class="payer-opt py-2 px-3 rounded-xl border border-primary bg-primary/10 text-primary font-label-md font-bold text-center" data-payer="Elena" type="button">Elena</button>
-<button class="payer-opt py-2 px-3 rounded-xl border border-outline-variant hover:bg-surface text-on-surface-variant font-label-md text-center" data-payer="Carlos" type="button">Carlos</button>
+<button class="payer-opt py-2 px-3 rounded-xl border border-primary bg-primary/10 text-primary font-label-md font-bold text-center" data-payer="Pamella" type="button">Pamella</button>
+<button class="payer-opt py-2 px-3 rounded-xl border border-outline-variant hover:bg-surface text-on-surface-variant font-label-md text-center" data-payer="Alfonsso" type="button">Alfonsso</button>
 <button class="payer-opt py-2 px-3 rounded-xl border border-outline-variant hover:bg-surface text-on-surface-variant font-label-md text-center" data-payer="50/50" type="button">50/50</button>
 </div>
 </div>
@@ -443,24 +439,21 @@
 </div>
 </nav>
 <script>
-    const API_URL = "https://script.google.com/macros/s/AKfycbw3hk0W8vEJ7P3th2YnpMVEgtOm1f3ia5sNllQFG_QUIcVfMsFj7pwVisXCfeuDwXJY/exec";
+    const API_URL = (typeof CONFIG !== 'undefined' && CONFIG.API_URL) ? CONFIG.API_URL : "https://script.google.com/macros/s/AKfycbw3hk0W8vEJ7P3th2YnpMVEgtOm1f3ia5sNllQFG_QUIcVfMsFj7pwVisXCfeuDwXJY/exec";
 
-    // Defaults presupuestarios estándar
-    const DEFAULT_PRESUPUESTO = {
-      ingresosTotales: 3850,
-      limiteGastos: 2920,
-      categorias: [
-        { nombre: 'Vivienda', limite: 920, icono: 'home', color: '#00685f' },
-        { nombre: 'Vida Diaria', limite: 650, icono: 'shopping_bag', color: '#008378' },
-        { nombre: 'Suministros', limite: 450, icono: 'bolt', color: '#565e74' },
-        { nombre: 'Fondos & Vacaciones', limite: 400, icono: 'savings', color: '#a36700' },
-        { nombre: 'Transporte', limite: 200, icono: 'local_gas_station', color: '#825100' },
-        { nombre: 'Impuestos/Otros', limite: 300, icono: 'receipt', color: '#bec6e0' }
-      ]
-    };
+    // Grupos estándar requeridos según la estructura del presupuesto
+    const DEFAULT_PRESUPUESTO_GRUPOS = [
+      { nombre: 'Vivienda', limite: 0, icono: 'home', color: '#00685f' },
+      { nombre: 'Suministros / Fijos', limite: 0, icono: 'bolt', color: '#565e74' },
+      { nombre: 'Deudas', limite: 0, icono: 'credit_card', color: '#a36700' },
+      { nombre: 'Vida Diaria', limite: 0, icono: 'shopping_bag', color: '#008378' },
+      { nombre: 'Impuestos + Gastos Vivienda', limite: 0, icono: 'receipt_long', color: '#bec6e0' },
+      { nombre: 'Fondo Vehículos', limite: 0, icono: 'directions_car', color: '#825100' },
+      { nombre: 'Otros / Imprevistos', limite: 0, icono: 'pending', color: '#6d7a77' }
+    ];
 
     let currentFilter = 'Conjunto';
-    let selectedPayer = 'Elena';
+    let selectedPayer = 'Pamella';
 
     // Obtener mes dinámico
     function getMesActual() {
@@ -471,29 +464,88 @@
       return mes.charAt(0).toUpperCase() + mes.slice(1);
     }
 
-    // Obtener presupuesto base de localStorage
+    // Normalizador de nombres de grupo
+    function normalizeGroupName(str) {
+      if (!str) return 'Otros / Imprevistos';
+      const clean = str.trim().toLowerCase();
+      if (clean.includes('vivienda') && (clean.includes('impuesto') || clean.includes('gasto'))) return 'Impuestos + Gastos Vivienda';
+      if (clean.includes('vivienda')) return 'Vivienda';
+      if (clean.includes('suministro') || clean.includes('fijo')) return 'Suministros / Fijos';
+      if (clean.includes('deuda')) return 'Deudas';
+      if (clean.includes('vida') || clean.includes('diaria') || clean.includes('supermercado')) return 'Vida Diaria';
+      if (clean.includes('vehiculo') || clean.includes('coche') || clean.includes('transporte')) return 'Fondo Vehículos';
+      if (clean.includes('imprevisto') || clean.includes('otro')) return 'Otros / Imprevistos';
+      return str;
+    }
+
+    // Obtener presupuesto base de localStorage agrupando de forma dinámica
     function getPresupuestoBase() {
       const stored = localStorage.getItem('finanzas_presupuesto_base');
+      let ingresosTotales = 0;
+      let limiteGastos = 0;
+
+      // Base clone
+      const gruposMap = {};
+      DEFAULT_PRESUPUESTO_GRUPOS.forEach(g => {
+        gruposMap[g.nombre] = { ...g, limite: 0 };
+      });
+
       if (stored) {
         try {
           const parsed = JSON.parse(stored);
           if (parsed && typeof parsed === 'object') {
-            return {
-              ingresosTotales: Number(parsed.ingresosTotales || parsed.ingresos || 3850),
-              limiteGastos: Number(parsed.limiteGastos || parsed.limite || 2920),
-              categorias: parsed.categorias || DEFAULT_PRESUPUESTO.categorias
-            };
+            ingresosTotales = Number(parsed.ingresosTotales || parsed.ingresos || 0);
+
+            // Si vienen partidas detalladas (ej. partidas: [{ categoria: 'Vivienda', importe: 850 }])
+            if (Array.isArray(parsed.partidas)) {
+              parsed.partidas.forEach(p => {
+                const grp = normalizeGroupName(p.categoria || p.grupo || p.seccion || 'Otros / Imprevistos');
+                const monto = parseFloat(p.importe || p.limite || p.monto || 0) || 0;
+                if (!gruposMap[grp]) {
+                  gruposMap[grp] = { nombre: grp, limite: 0, icono: 'category', color: '#565e74' };
+                }
+                gruposMap[grp].limite += monto;
+              });
+            } else if (Array.isArray(parsed.categorias) || Array.isArray(parsed.grupos)) {
+              const items = parsed.categorias || parsed.grupos;
+              items.forEach(c => {
+                const grp = normalizeGroupName(c.nombre || c.categoria || 'Otros / Imprevistos');
+                const monto = parseFloat(c.limite || c.importe || c.monto || 0) || 0;
+                if (!gruposMap[grp]) {
+                  gruposMap[grp] = { nombre: grp, limite: 0, icono: c.icono || 'category', color: c.color || '#565e74' };
+                }
+                gruposMap[grp].limite += monto;
+              });
+            } else if (parsed.secciones && typeof parsed.secciones === 'object') {
+              Object.entries(parsed.secciones).forEach(([key, val]) => {
+                const grp = normalizeGroupName(key);
+                const monto = parseFloat(val) || 0;
+                if (gruposMap[grp]) gruposMap[grp].limite += monto;
+              });
+            }
+
+            limiteGastos = Number(parsed.limiteGastos || parsed.limite || Object.values(gruposMap).reduce((acc, g) => acc + g.limite, 0));
           }
         } catch (e) {
           console.warn("Error parsing finanzas_presupuesto_base", e);
         }
       }
-      return DEFAULT_PRESUPUESTO;
+
+      // Si no hay partidas pero límite general existe, o cálculo directo
+      if (limiteGastos === 0) {
+        limiteGastos = Object.values(gruposMap).reduce((acc, g) => acc + g.limite, 0);
+      }
+
+      return {
+        ingresosTotales,
+        limiteGastos,
+        categorias: Object.values(gruposMap)
+      };
     }
 
-    // Obtener tickets de gasto reales del mes
+    // Obtener tickets de gasto del mes (finanzas_tickets_mes prioritario)
     function getTickets() {
-      const raw = localStorage.getItem('tickets_mes') || localStorage.getItem('finanzas_gastos_actuales');
+      const raw = localStorage.getItem('finanzas_tickets_mes') || localStorage.getItem('tickets_mes') || localStorage.getItem('finanzas_gastos_actuales');
       if (!raw) return [];
       try {
         const parsed = JSON.parse(raw);
@@ -504,8 +556,9 @@
       return [];
     }
 
-    // Guardar tickets
+    // Guardar tickets en localStorage
     function saveTickets(tickets) {
+      localStorage.setItem('finanzas_tickets_mes', JSON.stringify(tickets));
       localStorage.setItem('tickets_mes', JSON.stringify(tickets));
       localStorage.setItem('finanzas_gastos_actuales', JSON.stringify(tickets));
     }
@@ -518,12 +571,35 @@
     // Icono correspondiente a categoría
     function getCategoryIcon(cat) {
       const c = (cat || '').toLowerCase();
+      if (c.includes('vivienda') && (c.includes('impuesto') || c.includes('gasto'))) return 'receipt_long';
       if (c.includes('vivienda')) return 'home';
-      if (c.includes('vida') || c.includes('supermercado') || c.includes('alimentacion') || c.includes('comida')) return 'shopping_bag';
-      if (c.includes('suministro') || c.includes('luz') || c.includes('agua') || c.includes('fibra')) return 'bolt';
-      if (c.includes('transporte') || c.includes('gasolina') || c.includes('coche')) return 'local_gas_station';
-      if (c.includes('fondo') || c.includes('ahorro') || c.includes('vacaciones')) return 'savings';
-      return 'receipt';
+      if (c.includes('suministro') || c.includes('fijo') || c.includes('luz') || c.includes('agua') || c.includes('fibra')) return 'bolt';
+      if (c.includes('deuda') || c.includes('prestamo') || c.includes('tarjeta')) return 'credit_card';
+      if (c.includes('vida') || c.includes('supermercado') || c.includes('comida') || c.includes('alimentacion')) return 'shopping_bag';
+      if (c.includes('vehiculo') || c.includes('coche') || c.includes('transporte') || c.includes('gasolina')) return 'directions_car';
+      return 'pending';
+    }
+
+    // Poblar dropdown de categorías del modal
+    function populateCategorySelect() {
+      const select = document.getElementById('input-categoria');
+      if (!select) return;
+      select.innerHTML = '';
+      DEFAULT_PREPRES_GRUPOS = [
+        'Vivienda',
+        'Suministros / Fijos',
+        'Deudas',
+        'Vida Diaria',
+        'Impuestos + Gastos Vivienda',
+        'Fondo Vehículos',
+        'Otros / Imprevistos'
+      ];
+      DEFAULT_PREPRES_GRUPOS.forEach(grp => {
+        const opt = document.createElement('option');
+        opt.value = grp;
+        opt.textContent = grp;
+        select.appendChild(opt);
+      });
     }
 
     // Render principal
@@ -537,25 +613,25 @@
       // Filtrar según miembro
       let ticketsFiltrados = allTickets;
       if (currentFilter !== 'Conjunto') {
-        ticketsFiltrados = allTickets.filter(t => (t.pagador || t.quien || '').toLowerCase().includes(currentFilter.toLowerCase()));
+        ticketsFiltrados = allTickets.filter(t => (t.pagador || t.quien || t.usuario || '').toLowerCase().includes(currentFilter.toLowerCase()));
       }
 
       const totalGastado = ticketsFiltrados.reduce((acc, t) => acc + (parseFloat(t.importe || t.monto || 0) || 0), 0);
       const ingresosTotales = pBase.ingresosTotales;
       const limiteGastos = pBase.limiteGastos;
-      const saldoDisponible = Math.max(0, ingresosTotales - totalGastado);
+      const saldoDisponible = ingresosTotales - totalGastado;
 
       // Métricas cards
       document.getElementById('ingresos-val').textContent = formatEUR(ingresosTotales);
       document.getElementById('gastos-val').textContent = formatEUR(totalGastado);
       document.getElementById('limite-gasto-val').textContent = 'Límite: ' + formatEUR(limiteGastos);
-      document.getElementById('saldo-disponible').textContent = '+' + formatEUR(saldoDisponible);
+      document.getElementById('saldo-disponible').textContent = (saldoDisponible >= 0 ? '+' : '') + formatEUR(saldoDisponible);
 
       // Margen y Barra
-      const pctConsumo = limiteGastos > 0 ? Math.min(100, Math.round((totalGastado / limiteGastos) * 100)) : 0;
-      const pctMargen = ingresosTotales > 0 ? Math.max(0, Math.round(((ingresosTotales - totalGastado) / ingresosTotales) * 100)) : 100;
+      const pctConsumo = limiteGastos > 0 ? Math.min(100, Math.round((totalGastado / limiteGastos) * 100)) : (totalGastado > 0 ? 100 : 0);
+      const pctMargen = ingresosTotales > 0 ? Math.round(((ingresosTotales - totalGastado) / ingresosTotales) * 100) : 0;
       
-      document.getElementById('margen-val').textContent = pctMargen + '% margen';
+      document.getElementById('margen-val').textContent = (pctMargen < 0 ? '0' : pctMargen) + '% margen';
       document.getElementById('porcentaje-gasto-label').textContent = pctConsumo + '% presupuestado';
       document.getElementById('barra-consumo-general').style.width = pctConsumo + '%';
       
@@ -570,7 +646,7 @@
       // Agrupación por categorías para Donut y Listado
       const catTotals = {};
       ticketsFiltrados.forEach(t => {
-        const cat = t.categoria || 'Otros';
+        const cat = normalizeGroupName(t.categoria || t.grupo || 'Otros / Imprevistos');
         catTotals[cat] = (catTotals[cat] || 0) + (parseFloat(t.importe || t.monto || 0) || 0);
       });
 
@@ -585,7 +661,7 @@
       const donutLegend = document.getElementById('donut-legend-container');
       donutLegend.innerHTML = '';
 
-      const colors = ['#00685f', '#008378', '#565e74', '#a36700', '#bec6e0', '#825100'];
+      const colors = ['#00685f', '#008378', '#565e74', '#a36700', '#bec6e0', '#825100', '#6d7a77'];
       const circumference = 2 * Math.PI * 38; // ~238.76
 
       if (catEntries.length === 0) {
@@ -623,21 +699,21 @@
         });
       }
 
-      // Ejecución Presupuestaria por Categoría
+      // Ejecución Presupuestaria Dinámica (Gasto vs Techo sin hardcode)
       const progressContainer = document.getElementById('budget-progress-container');
       progressContainer.innerHTML = '';
       pBase.categorias.forEach(cat => {
         const spent = catTotals[cat.nombre] || 0;
-        const limit = cat.limite || 1;
-        const pct = Math.min(100, Math.round((spent / limit) * 100));
+        const limit = cat.limite || 0;
+        const pct = limit > 0 ? Math.min(100, Math.round((spent / limit) * 100)) : (spent > 0 ? 100 : 0);
         const rem = Math.max(0, limit - spent);
         
         let barColor = 'bg-primary';
-        let statusText = `Quedan ${formatEUR(rem)} disponibles`;
-        if (pct >= 100) {
+        let statusText = limit > 0 ? `Quedan ${formatEUR(rem)} disponibles` : (spent > 0 ? 'Sin techo fijado' : '0,00 € disponibles');
+        if (limit > 0 && spent >= limit) {
           barColor = 'bg-tertiary';
-          statusText = 'Límite alcanzado / completado';
-        } else if (pct >= 85) {
+          statusText = 'Límite alcanzado / superado';
+        } else if (limit > 0 && pct >= 85) {
           barColor = 'bg-tertiary-container';
         }
 
@@ -675,7 +751,7 @@
               <span class="material-symbols-outlined text-[24px]">receipt</span>
             </div>
             <p class="font-body-md font-bold text-on-surface">No hay movimientos registrados en este ciclo.</p>
-            <p class="font-body-sm text-on-surface-variant max-w-xs">Pulsa en "Añadir Gasto" para registrar el primer ticket y mantener las cuentas al día.</p>
+            <p class="font-body-sm text-on-surface-variant max-w-xs">Pulsa en "+ Añadir Gasto" para registrar el primer ticket y mantener las cuentas al día.</p>
           </div>
         `;
       } else {
@@ -686,9 +762,9 @@
           const isOdd = i % 2 !== 0;
           item.className = `p-space-sm flex items-center justify-between hover:bg-surface-container-low transition-colors ${isOdd ? 'bg-surface-container-low/40' : ''}`;
           
-          const icon = getCategoryIcon(t.categoria);
-          const pagador = t.pagador || t.quien || 'Elena';
-          const badgeClass = pagador.toLowerCase().includes('carlos') 
+          const icon = getCategoryIcon(t.categoria || t.grupo);
+          const pagador = t.pagador || t.quien || t.usuario || 'Pamella';
+          const badgeClass = pagador.toLowerCase().includes('alfonsso') 
             ? 'bg-secondary-container text-secondary' 
             : (pagador.toLowerCase().includes('50') ? 'bg-tertiary/20 text-tertiary' : 'bg-primary-container/20 text-primary');
 
@@ -707,7 +783,7 @@
             </div>
             <div class="text-right flex-shrink-0 pl-2">
               <span class="font-label-lg text-label-lg font-bold text-on-surface block">-${formatEUR(t.importe || t.monto)}</span>
-              <span class="font-label-caps text-label-caps text-on-surface-variant">${t.categoria || 'Varios'}</span>
+              <span class="font-label-caps text-label-caps text-on-surface-variant">${t.categoria || t.grupo || 'Varios'}</span>
             </div>
           `;
           movContainer.appendChild(item);
@@ -720,6 +796,7 @@
     document.getElementById('btn-add-expense-modal').addEventListener('click', () => {
       document.getElementById('input-concepto').value = '';
       document.getElementById('input-importe').value = '';
+      populateCategorySelect();
       modalGasto.classList.remove('hidden');
     });
 
@@ -727,7 +804,7 @@
       modalGasto.classList.add('hidden');
     });
 
-    // Selector de Pagador en Modal
+    // Selector de Pagador en Modal (Pamella / Alfonsso / 50/50)
     document.querySelectorAll('.payer-opt').forEach(btn => {
       btn.addEventListener('click', function() {
         document.querySelectorAll('.payer-opt').forEach(b => {
@@ -758,6 +835,7 @@
         importe,
         categoria,
         pagador: selectedPayer,
+        usuario: selectedPayer,
         fecha,
         timestamp: new Date().toISOString()
       };
@@ -820,13 +898,13 @@
         item.className = 'p-3 rounded-xl bg-surface-container-low flex items-center justify-between';
         item.innerHTML = `
           <div class="flex items-center gap-2 min-w-0">
-            <span class="material-symbols-outlined text-[18px] text-primary">${getCategoryIcon(t.categoria)}</span>
+            <span class="material-symbols-outlined text-[18px] text-primary">${getCategoryIcon(t.categoria || t.grupo)}</span>
             <div class="min-w-0">
               <p class="font-body-md font-bold text-on-surface truncate">${t.concepto || 'Gasto'}</p>
-              <p class="font-body-sm text-on-surface-variant text-xs">${t.pagador} • ${t.categoria} • ${t.fecha}</p>
+              <p class="font-body-sm text-on-surface-variant text-xs">${t.pagador || t.usuario || 'Pamella'} • ${t.categoria || t.grupo || 'Varios'} • ${t.fecha || ''}</p>
             </div>
           </div>
-          <span class="font-label-lg font-bold text-on-surface flex-shrink-0">-${formatEUR(t.importe)}</span>
+          <span class="font-label-lg font-bold text-on-surface flex-shrink-0">-${formatEUR(t.importe || t.monto)}</span>
         `;
         listContainer.appendChild(item);
       });
@@ -861,8 +939,8 @@
         const resp = await fetch(API_URL + '?action=get_data');
         if (resp.ok) {
           const data = await resp.json();
-          if (data && data.tickets && Array.isArray(data.tickets)) {
-            saveTickets(data.tickets);
+          if (data && (data.tickets || data.gastos) && Array.isArray(data.tickets || data.gastos)) {
+            saveTickets(data.tickets || data.gastos);
           }
           if (data && data.presupuesto) {
             localStorage.setItem('finanzas_presupuesto_base', JSON.stringify(data.presupuesto));
@@ -882,6 +960,7 @@
 
     // Inicialización al cargar la página
     document.addEventListener('DOMContentLoaded', () => {
+      populateCategorySelect();
       renderDashboard();
     });
   </script>
