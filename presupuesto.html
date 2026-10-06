@@ -6,8 +6,7 @@
       min-height: max(884px, 100dvh);
     }
   </style>
-  <script src="config.js"></script>
-</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Finanzas Claras" class="w-8 h-8 rounded-lg object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAaSlRh9-0bRBqtOTJivI4JY0cC-IYEoyDdJrUpt1ca2MGoyByU6hN5rEpjdNwWXOwmGXmyn7zmGt7BvsO8ztT05ESqOM1gjQSdRYwr3Oo2r8hb0Hqo2dEdy0JLD6-EF4pW6IxsrRFjGeXdWbEOZdJs983luQPgjYVQdaQE3oCWuHfXplQDLHQT6O70zcwsrePHqH7g5RT_vtr6toh24mAchVKCL3O13MrWv244E90Fl1wFq4-AWwz-Dw"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-on-surface truncate">Finanzas Claras</span><span class="font-label-caps text-label-caps text-on-surface-variant font-normal hidden xs:inline">• Presupuesto</span></div><div class="flex items-center gap-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-caps text-label-caps text-primary truncate" id="drive-sync-status">Drive sincronizado (2)</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Estado de sincronización Drive" class="w-11 h-11 flex items-center justify-center rounded-full text-primary hover:bg-surface-container-high transition-colors" type="button"><span class="material-symbols-outlined text-[20px]">cloud_done</span></button><div class="relative flex items-center justify-center p-0.5 rounded-full bg-secondary-container"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ264MjA5E1oby9sCK0PXSZDe5YkX2gv4d4TP-kuPRdSIO3vwoSeqyq_jpddfpCND52FaBXEIF8s7a1xxXVTx3Rrb8pY6u3jFjnMB5W5VydybYP1UoS6UtEFcHwyyy5HX4-4BpxHVD4GIEvnBZD2iECrcW9j4zuceBZzvwQ2d4P-lDbFm94lMT66K-QLtwB-bzIczlTephUiqRVwkz20NkTPP5_PRVzSsOa6rS-M0blePotPxEwvUbRA"/><span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-primary rounded-full ring-2 ring-surface flex items-center justify-center"><span class="material-symbols-outlined text-[8px] text-on-primary">group</span></span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-32">
+</head><body class="bg-surface font-body-md text-body-md text-on-surface flex flex-col min-h-screen antialiased"><header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe"><div class="h-16 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Finanzas Claras" class="w-8 h-8 rounded-lg object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB_gJpd0Suv1K9YVtIoTG5u8X-jXVe__tdEyMXLYjvBzOr4RxDPNTNRJuQGhXh0dWtkqCd8r-aHVArfF_pJ11vgUYHJLPR5Vw2AzxZfiEYamXQIUgZn01Cl3DJnh0Tqz7gGC2uhKzHDRrPi-wtcqUChEx_Hacq7tHH8Z66zTgJ7rLW9zkSt2M81AITyHlNxSOL3gDznvSxEOTeiyXOguNNNmVRxmEjOpoFlL-UhG4pW"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-headline-md text-headline-md text-on-surface truncate">Finanzas Claras</span><span class="font-label-caps text-label-caps text-on-surface-variant font-normal hidden xs:inline">• Presupuesto</span></div><div class="flex items-center gap-1"><span class="inline-block w-1.5 h-1.5 rounded-full bg-primary animate-pulse"></span><span class="font-label-caps text-label-caps text-primary truncate" id="drive-sync-status">Drive sincronizado (2)</span></div></div></div><div class="flex items-center gap-space-xs flex-shrink-0"><button aria-label="Estado de sincronización Drive" class="w-11 h-11 flex items-center justify-center rounded-full text-primary hover:bg-surface-container-high transition-colors" onclick="syncWithCloud(true)" type="button"><span class="material-symbols-outlined text-[20px]">cloud_done</span></button><div class="relative flex items-center justify-center p-0.5 rounded-full bg-secondary-container"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDJ264MjA5E1oby9sCK0PXSZDe5YkX2gv4d4TP-kuPRdSIO3vwoSeqyq_jpddfpCND52FaBXEIF8s7a1xxXVTx3Rrb8pY6u3jFjnMB5W5VydybYP1UoS6UtEFcHwyyy5HX4-4BpxHVD4GIEvnBZD2iECrcW9j4zuceBZzvwQ2d4P-lDbFm94lMT66K-QLtwB-bzIczlTephUiqRVwkz20NkTPP5_PRVzSsOa6rS-M0blePotPxEwvUbRA"/><span class="absolute -bottom-0.5 -right-0.5 w-3 h-3 bg-primary rounded-full ring-2 ring-surface flex items-center justify-center"><span class="material-symbols-outlined text-[8px] text-on-primary">group</span></span></div></div></div></header><main class="flex-1 flex flex-col relative w-full pt-16 pb-36 bg-surface min-h-screen"><div class="flex flex-col w-full px-margin pb-36">
 <!-- Cabecera explicativa con totalizador y momentos de deleite -->
 <div class="flex flex-col gap-space-sm pt-space-md mb-space-md">
 <div class="flex items-start justify-between gap-space-sm">
@@ -35,14 +34,14 @@
 <div class="flex flex-col">
 <span class="font-label-caps text-label-caps text-primary-fixed uppercase tracking-wider">Margen de Ahorro Previsto</span>
 <div class="flex items-baseline gap-1 mt-0.5">
-<span class="font-metric-display-mobile text-metric-display-mobile tracking-tight font-bold text-on-primary" id="display-savings">930,00</span>
+<span class="font-metric-display-mobile text-metric-display-mobile tracking-tight font-bold text-on-primary" id="display-savings">840,00</span>
 <span class="font-label-lg text-label-lg text-primary-fixed">€/mes</span>
 </div>
 </div>
 <div class="flex flex-col items-end">
 <span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-surface-container-lowest/20 font-label-md text-label-md text-on-primary">
 <span class="material-symbols-outlined text-[13px]">trending_up</span>
-<span id="display-savings-rate">24,2%</span>
+<span id="display-savings-rate">21,8%</span>
 </span>
 <span class="font-body-sm text-[11px] text-primary-fixed mt-1">Capacidad neta</span>
 </div>
@@ -60,18 +59,18 @@
 <span class="material-symbols-outlined text-[14px]">arrow_upward_alt</span>
 <span class="font-label-caps text-[10px] uppercase font-bold tracking-wider">Gastos Estimados</span>
 </div>
-<span class="font-headline-md text-headline-md font-bold mt-0.5 text-on-primary" id="display-expense-hero">2.920,00 €</span>
+<span class="font-headline-md text-headline-md font-bold mt-0.5 text-on-primary" id="display-expense-hero">3.010,00 €</span>
 </div>
 </div>
 <!-- Barra de distribución visual interactiva -->
 <div class="mt-space-sm flex flex-col gap-1.5">
 <div class="flex justify-between font-label-caps text-[10px] text-primary-fixed">
 <span>Distribución del presupuesto</span>
-<span id="dist-caption">Gastos 75.8% · Ahorro 24.2%</span>
+<span id="dist-caption">Gastos 78.2% · Ahorro 21.8%</span>
 </div>
 <div class="w-full h-2 rounded-full bg-surface-container-lowest/20 overflow-hidden flex">
-<div class="h-full bg-secondary-fixed transition-all duration-300" id="bar-expenses" style="width: 75.8%;"></div>
-<div class="h-full bg-primary-fixed transition-all duration-300" id="bar-savings" style="width: 24.2%;"></div>
+<div class="h-full bg-secondary-fixed transition-all duration-300" id="bar-expenses" style="width: 78.2%;"></div>
+<div class="h-full bg-primary-fixed transition-all duration-300" id="bar-savings" style="width: 21.8%;"></div>
 </div>
 </div>
 </div>
@@ -113,7 +112,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-type="income" inputmode="decimal" type="text" value="2.400,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <!-- Fila: Alquiler recurrente -->
@@ -127,7 +126,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-type="income" inputmode="decimal" type="text" value="850,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <!-- Fila: Alquile Cantos Altos -->
@@ -141,7 +140,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-type="income" inputmode="decimal" type="text" value="450,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <!-- Fila: Ingresos Extras -->
@@ -155,7 +154,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-type="income" inputmode="decimal" type="text" value="150,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 </div>
@@ -206,7 +205,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="vivienda" data-type="expense" inputmode="decimal" type="text" value="750,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -216,7 +215,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="vivienda" data-type="expense" inputmode="decimal" type="text" value="120,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 </div>
@@ -247,7 +246,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="suministros" data-type="expense" inputmode="decimal" type="text" value="75,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -257,7 +256,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="suministros" data-type="expense" inputmode="decimal" type="text" value="45,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -267,7 +266,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="suministros" data-type="expense" inputmode="decimal" type="text" value="30,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -277,7 +276,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="suministros" data-type="expense" inputmode="decimal" type="text" value="40,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -287,7 +286,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="suministros" data-type="expense" inputmode="decimal" type="text" value="65,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -297,7 +296,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="suministros" data-type="expense" inputmode="decimal" type="text" value="65,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 </div>
@@ -328,7 +327,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="deudas" data-type="expense" inputmode="decimal" type="text" value="180,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -338,7 +337,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="deudas" data-type="expense" inputmode="decimal" type="text" value="95,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -348,7 +347,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="deudas" data-type="expense" inputmode="decimal" type="text" value="85,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 </div>
@@ -379,7 +378,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="vida" data-type="expense" inputmode="decimal" type="text" value="450,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -389,7 +388,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="vida" data-type="expense" inputmode="decimal" type="text" value="140,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -399,7 +398,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="vida" data-type="expense" inputmode="decimal" type="text" value="60,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -409,7 +408,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="vida" data-type="expense" inputmode="decimal" type="text" value="180,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -419,7 +418,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="vida" data-type="expense" inputmode="decimal" type="text" value="120,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 </div>
@@ -450,7 +449,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="impuestos" data-type="expense" inputmode="decimal" type="text" value="170,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 </div>
@@ -481,7 +480,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="vehiculos" data-type="expense" inputmode="decimal" type="text" value="90,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 <div class="budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group">
@@ -491,7 +490,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="vehiculos" data-type="expense" inputmode="decimal" type="text" value="100,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 </div>
@@ -522,7 +521,7 @@
 <input class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" data-category="otros" data-type="expense" inputmode="decimal" type="text" value="150,00"/>
 <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
 </div>
-<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="deleteItem(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
+<button aria-label="Eliminar partida" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" onclick="eliminarFila(this)" type="button"><span class="material-symbols-outlined text-[18px]">delete</span></button>
 </div>
 </div>
 </div>
@@ -546,21 +545,27 @@
 <div class="flex items-center justify-between">
 <div class="flex flex-col">
 <span class="font-label-caps text-[10px] text-on-surface-variant uppercase font-bold tracking-wider">TOTAL GASTOS ESTIMADOS</span>
-<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface" id="footer-expenses">2.920,00 €</span>
+<span class="font-headline-lg-mobile text-headline-lg-mobile font-bold text-on-surface" id="footer-expenses">3.010,00 €</span>
 </div>
 <div class="flex flex-col items-end">
 <span class="font-label-caps text-[10px] text-primary uppercase font-bold tracking-wider">MARGEN NETO</span>
-<span class="font-headline-md text-headline-md font-bold text-primary" id="footer-savings">+930,00 €</span>
+<span class="font-headline-md text-headline-md font-bold text-primary" id="footer-savings">+840,00 €</span>
 </div>
 </div>
-<!-- Botón de acción principal -->
-<button class="w-full h-12 rounded-lg bg-primary hover:bg-primary-container active:scale-[0.99] text-on-primary font-label-lg text-label-lg font-bold shadow-md flex items-center justify-center gap-2 transition-all" id="btn-save" onclick="saveMasterBudget()" type="button">
-<span class="material-symbols-outlined text-[20px]">sync_saved_locally</span>
-<span>Guardar y sincronizar plantilla</span>
+<!-- Botones de acción principales -->
+<div class="grid grid-cols-5 gap-2">
+<button class="col-span-3 h-12 rounded-lg bg-primary hover:bg-primary-container active:scale-[0.99] text-on-primary font-label-lg text-label-lg font-bold shadow-md flex items-center justify-center gap-1.5 transition-all text-xs" id="btn-save" onclick="saveMasterBudget()" type="button">
+<span class="material-symbols-outlined text-[18px]">sync_saved_locally</span>
+<span>Guardar y sincronizar</span>
 </button>
+<button class="col-span-2 h-12 rounded-lg bg-surface-container hover:bg-surface-container-highest active:scale-[0.99] text-error font-label-md text-label-md font-semibold shadow-sm flex items-center justify-center gap-1 transition-all text-xs border border-error/20" id="btn-reset" onclick="resetMasterBudgetToZero()" type="button">
+<span class="material-symbols-outlined text-[17px]">restart_alt</span>
+<span>Resetear a 0 €</span>
+</button>
+</div>
 <!-- Mensaje de feedback tras guardar -->
 <div class="hidden text-center py-2 px-3 rounded-lg bg-primary-container text-on-primary-container font-label-md text-label-md shadow-sm transition-all" id="save-toast">
-        ✓ ¡Guardado con éxito en Google Sheets!
+        ✓ Presupuesto guardado y sincronizado local y en Google Drive
       </div>
 </div>
 </div>
@@ -568,10 +573,11 @@
 <script>
   // Configuración de API Google Apps Script
   const API_URL = "https://script.google.com/macros/s/AKfycbw3hk0W8vEJ7P3th2YnpMVEgtOm1f3ia5sNllQFG_QUIcVfMsFj7pwVisXCfeuDwXJY/exec";
+  const STORAGE_KEY = "finanzas_presupuesto_base";
 
   // Helper para convertir formato español "1.250,50" a float
   function parseSpanishNumber(val) {
-    if (!val) return 0;
+    if (val === undefined || val === null) return 0;
     const clean = val.toString().replace(/\./g, '').replace(',', '.').replace(/[^0-9.-]/g, '');
     const num = parseFloat(clean);
     return isNaN(num) ? 0 : num;
@@ -579,6 +585,7 @@
 
   // Helper para convertir float a formato español "1.250,50"
   function formatSpanishNumber(num) {
+    if (isNaN(num)) num = 0;
     return num.toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 });
   }
 
@@ -586,7 +593,7 @@
     let totalIncome = 0;
     let totalExpenses = 0;
 
-    // Recorrer todos los inputs
+    // Recorrer todos los inputs de importe
     document.querySelectorAll('.currency-input').forEach(input => {
       const val = parseSpanishNumber(input.value);
       const type = input.getAttribute('data-type');
@@ -599,7 +606,7 @@
 
     const savings = totalIncome - totalExpenses;
     const savingsPercent = totalIncome > 0 ? ((savings / totalIncome) * 100).toFixed(1) : 0;
-    const expensePercent = totalIncome > 0 ? ((totalExpenses / totalIncome) * 100).toFixed(1) : 0;
+    const expensePercent = totalIncome > 0 ? ((totalExpenses / totalIncome) * 100).toFixed(1) : (totalExpenses > 0 ? 100 : 0);
 
     // Actualizar Subtotales de Categorías de Gastos
     const categories = ['vivienda', 'suministros', 'deudas', 'vida', 'impuestos', 'vehiculos', 'otros'];
@@ -633,10 +640,10 @@
     if (distCaption) distCaption.textContent = `Gastos ${expensePercent}% · Ahorro ${savingsPercent}%`;
 
     const barExpenses = document.getElementById('bar-expenses');
-    if (barExpenses) barExpenses.style.width = `${Math.min(Math.max(expensePercent, 0), 100)}%`;
+    if (barExpenses) barExpenses.style.width = `${Math.min(Math.max(parseFloat(expensePercent), 0), 100)}%`;
 
     const barSavings = document.getElementById('bar-savings');
-    if (barSavings) barSavings.style.width = `${Math.min(Math.max(savingsPercent, 0), 100)}%`;
+    if (barSavings) barSavings.style.width = `${Math.min(Math.max(parseFloat(savingsPercent), 0), 100)}%`;
 
     // Actualizar Sticky Footer
     const footerExpenses = document.getElementById('footer-expenses');
@@ -653,7 +660,101 @@
     }
   }
 
-  // Delegación de eventos para inputs dinámicos de importe
+  // Recolectar el estado actual completo del formulario
+  function collectCurrentData() {
+    const incomes = [];
+    document.querySelectorAll('#income-list .budget-item').forEach(el => {
+      const name = el.querySelector('.concept-input')?.value || 'Sin nombre';
+      const amount = parseSpanishNumber(el.querySelector('.currency-input')?.value);
+      incomes.push({ concepto: name, importe: amount });
+    });
+
+    const expenses = {};
+    const categories = ['vivienda', 'suministros', 'deudas', 'vida', 'impuestos', 'vehiculos', 'otros'];
+    categories.forEach(cat => {
+      expenses[cat] = [];
+      document.querySelectorAll(`#list-${cat} .budget-item`).forEach(el => {
+        const name = el.querySelector('.concept-input')?.value || 'Sin nombre';
+        const amount = parseSpanishNumber(el.querySelector('.currency-input')?.value);
+        expenses[cat].push({ concepto: name, categoria: cat, importe: amount });
+      });
+    });
+
+    return {
+      version: 1,
+      fechaActualizacion: new Date().toISOString(),
+      ingresos: incomes,
+      gastos: expenses
+    };
+  }
+
+  // Renderizar la UI a partir de un objeto de datos guardado
+  function renderBudgetData(data) {
+    if (!data) return;
+
+    // Renderizar Ingresos
+    if (Array.isArray(data.ingresos) && data.ingresos.length > 0) {
+      const incomeContainer = document.getElementById('income-list');
+      if (incomeContainer) {
+        incomeContainer.innerHTML = '';
+        data.ingresos.forEach(item => {
+          incomeContainer.appendChild(createRowElement('income', '', item.concepto, item.importe));
+        });
+      }
+    }
+
+    // Renderizar Gastos
+    if (data.gastos) {
+      const categories = ['vivienda', 'suministros', 'deudas', 'vida', 'impuestos', 'vehiculos', 'otros'];
+      categories.forEach(cat => {
+        const listContainer = document.getElementById(`list-${cat}`);
+        const items = data.gastos[cat];
+        if (listContainer && Array.isArray(items) && items.length > 0) {
+          listContainer.innerHTML = '';
+          items.forEach(item => {
+            listContainer.appendChild(createRowElement('expense', cat, item.concepto, item.importe));
+          });
+        }
+      });
+    }
+
+    recalculateAll();
+  }
+
+  // Helper para crear el nodo DOM de una fila
+  function createRowElement(type, category, concepto, importe) {
+    const row = document.createElement('div');
+    row.className = 'budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group';
+    
+    const isIncome = type === 'income';
+    const catAttr = category ? `data-category="${category}"` : '';
+    const formattedAmount = formatSpanishNumber(Number(importe || 0));
+
+    row.innerHTML = `
+      <div class="flex items-center gap-2 min-w-0 flex-1">
+        ${isIncome ? '<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0">payments</span>' : ''}
+        <input type="text" value="${escapeHtml(concepto || '')}" ${catAttr} data-type="${type}" class="concept-input w-full bg-transparent font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none focus:bg-surface-container-lowest focus:px-2 focus:py-1 focus:rounded transition-all placeholder:text-on-surface-variant/50" />
+      </div>
+      <div class="flex items-center gap-1.5 flex-shrink-0">
+        <div class="relative w-28">
+          <input type="text" inputmode="decimal" value="${formattedAmount}" ${catAttr} data-type="${type}" class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" />
+          <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
+        </div>
+        <button type="button" onclick="eliminarFila(this)" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" aria-label="Eliminar partida">
+          <span class="material-symbols-outlined text-[18px]">delete</span>
+        </button>
+      </div>
+    `;
+    return row;
+  }
+
+  function escapeHtml(text) {
+    return text.replace(/[&<>"']/g, function(m) {
+      return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#039;' }[m];
+    });
+  }
+
+  // Delegación de eventos para inputs dinámicos de importe y concepto
   document.addEventListener('input', (e) => {
     if (e.target && e.target.classList.contains('currency-input')) {
       recalculateAll();
@@ -665,93 +766,99 @@
       const val = parseSpanishNumber(e.target.value);
       e.target.value = formatSpanishNumber(val);
       recalculateAll();
+      // Auto-respaldo local inmediato en cada edición
+      const current = collectCurrentData();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(current));
+    } else if (e.target && e.target.classList.contains('concept-input')) {
+      const current = collectCurrentData();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(current));
     }
   }, true);
 
-  // Función para eliminar partidas
-  function deleteItem(btn) {
+  // Función para eliminar filas funcional al 100%
+  function eliminarFila(btn) {
     const item = btn.closest('.budget-item');
     if (item) {
       item.remove();
       recalculateAll();
+      const current = collectCurrentData();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(current));
     }
   }
+  // Alias de compatibilidad
+  const deleteItem = eliminarFila;
 
-  // Añadir nuevos conceptos dinámicos con soporte para edición en línea y eliminación
+  // Añadir nuevos conceptos dinámicos
   function addNewConcept(containerId, type, category = '') {
     const container = document.getElementById(containerId);
     if (!container) return;
 
-    const row = document.createElement('div');
-    row.className = 'budget-item flex items-center justify-between gap-space-sm p-2 rounded-lg bg-surface-container-low hover:bg-surface-container transition-colors group';
-    
-    const isIncome = type === 'income';
-    const catAttr = category ? `data-category="${category}"` : '';
-
-    row.innerHTML = `
-      <div class="flex items-center gap-2 min-w-0 flex-1">
-        ${isIncome ? '<span class="material-symbols-outlined text-[18px] text-primary flex-shrink-0">attach_money</span>' : ''}
-        <input type="text" placeholder="Nuevo concepto..." ${catAttr} data-type="${type}" class="concept-input w-full bg-transparent font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none focus:bg-surface-container-lowest focus:px-2 focus:py-1 focus:rounded transition-all placeholder:text-on-surface-variant/50" />
-      </div>
-      <div class="flex items-center gap-1.5 flex-shrink-0">
-        <div class="relative w-28">
-          <input type="text" inputmode="decimal" value="0,00" ${catAttr} data-type="${type}" class="currency-input w-full h-10 pl-2 pr-6 text-right rounded-lg bg-surface-container-lowest font-label-lg text-label-lg text-on-surface font-semibold focus:outline-none shadow-sm" />
-          <span class="absolute right-2 top-1/2 -translate-y-1/2 font-label-md text-label-md text-on-surface-variant pointer-events-none">€</span>
-        </div>
-        <button type="button" onclick="deleteItem(this)" class="btn-delete w-8 h-8 flex items-center justify-center rounded-lg text-on-surface-variant/60 hover:text-error hover:bg-surface-container transition-colors" aria-label="Eliminar partida">
-          <span class="material-symbols-outlined text-[18px]">delete</span>
-        </button>
-      </div>
-    `;
-
+    const row = createRowElement(type, category, '', 0);
     container.appendChild(row);
     const conceptInput = row.querySelector('.concept-input');
-    if (conceptInput) conceptInput.focus();
+    if (conceptInput) {
+      conceptInput.placeholder = "Nuevo concepto...";
+      conceptInput.focus();
+    }
     recalculateAll();
+    const current = collectCurrentData();
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(current));
   }
 
-  // Interacción de guardado y sincronización con API_URL
-  async function saveMasterBudget() {
+  // Resetear todo el presupuesto a 0,00 €
+  function resetMasterBudgetToZero() {
+    const confirmed = confirm("¿Deseas poner a 0 € todos los importes del presupuesto manteniendo los conceptos?");
+    if (!confirmed) return;
+
+    document.querySelectorAll('.currency-input').forEach(input => {
+      input.value = "0,00";
+    });
+
+    recalculateAll();
+    saveMasterBudget(true);
+  }
+
+  // Interacción de guardado y sincronización con API_URL y localStorage
+  async function saveMasterBudget(isReset = false) {
     const btn = document.getElementById('btn-save');
     const toast = document.getElementById('save-toast');
     const syncStatus = document.getElementById('drive-sync-status');
-    if (!btn) return;
+    const currentData = collectCurrentData();
 
-    // Recolectar datos actuales
-    const incomes = [];
-    document.querySelectorAll('#income-list .budget-item').forEach(el => {
-      const name = el.querySelector('.concept-input')?.value || 'Sin nombre';
-      const amount = parseSpanishNumber(el.querySelector('.currency-input')?.value);
-      incomes.push({ concepto: name, importe: amount });
-    });
+    // 1. Persistencia local inmediata garantizada (100% a prueba de fallos)
+    localStorage.setItem(STORAGE_KEY, JSON.stringify(currentData));
+    // También guardar compatibilidad previa
+    localStorage.setItem('finanzas_plantilla_presupuesto', JSON.stringify(currentData));
 
-    const expenses = [];
-    document.querySelectorAll('input.currency-input[data-type="expense"]').forEach(input => {
-      const row = input.closest('.budget-item');
-      const name = row ? (row.querySelector('.concept-input')?.value || 'Sin nombre') : 'Gasto';
-      const category = input.getAttribute('data-category') || 'general';
-      const amount = parseSpanishNumber(input.value);
-      expenses.push({ concepto: name, categoria: category, importe: amount });
+    // Aplanar items de gastos para la API
+    const flatExpenses = [];
+    Object.keys(currentData.gastos).forEach(cat => {
+      currentData.gastos[cat].forEach(it => flatExpenses.push(it));
     });
 
     const payload = {
+      action: 'save_presupuesto',
       tipo: "plantilla_maestra",
-      fechaActualizacion: new Date().toISOString(),
-      ingresos: incomes,
-      gastos: expenses
+      fechaActualizacion: currentData.fechaActualizacion,
+      items: {
+        ingresos: currentData.ingresos,
+        gastos: flatExpenses
+      },
+      ingresos: currentData.ingresos,
+      gastos: flatExpenses
     };
 
-    const originalContent = btn.innerHTML;
-    btn.disabled = true;
-    btn.innerHTML = `
-      <span class="material-symbols-outlined text-[20px] animate-spin">refresh</span>
-      <span>Sincronizando con Google Sheets...</span>
-    `;
+    let originalContent = '';
+    if (btn) {
+      originalContent = btn.innerHTML;
+      btn.disabled = true;
+      btn.innerHTML = `
+        <span class="material-symbols-outlined text-[18px] animate-spin">refresh</span>
+        <span>${isReset ? 'Reseteando...' : 'Sincronizando...'}</span>
+      `;
+    }
 
     try {
-      // Guardar también en localStorage como respaldo offline
-      localStorage.setItem('finanzas_plantilla_presupuesto', JSON.stringify(payload));
-
       await fetch(API_URL, {
         method: "POST",
         mode: "no-cors",
@@ -761,16 +868,19 @@
         body: JSON.stringify(payload)
       });
 
-      // Feedback exitoso
-      btn.innerHTML = `
-        <span class="material-symbols-outlined text-[20px]">check_circle</span>
-        <span>¡Guardado con éxito!</span>
-      `;
-      btn.classList.remove('bg-primary');
-      btn.classList.add('bg-primary-container');
-      
+      if (btn) {
+        btn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px]">check_circle</span>
+          <span>¡Guardado con éxito!</span>
+        `;
+        btn.classList.remove('bg-primary');
+        btn.classList.add('bg-primary-container');
+      }
+
       if (toast) {
-        toast.textContent = "✓ ¡Guardado con éxito en Google Sheets!";
+        toast.textContent = isReset 
+          ? "✓ Presupuesto reseteado a 0 € y sincronizado local y en Google Drive"
+          : "✓ Presupuesto guardado y sincronizado local y en Google Drive";
         toast.classList.remove('hidden');
       }
       if (syncStatus) {
@@ -778,31 +888,77 @@
       }
 
       setTimeout(() => {
-        btn.innerHTML = originalContent;
-        btn.classList.remove('bg-primary-container');
-        btn.classList.add('bg-primary');
-        btn.disabled = false;
+        if (btn) {
+          btn.innerHTML = originalContent;
+          btn.classList.remove('bg-primary-container');
+          btn.classList.add('bg-primary');
+          btn.disabled = false;
+        }
         if (toast) toast.classList.add('hidden');
-      }, 2500);
+      }, 2800);
 
     } catch (err) {
-      console.warn("Sincronización online:", err);
-      btn.innerHTML = `
-        <span class="material-symbols-outlined text-[20px]">cloud_done</span>
-        <span>¡Guardado localmente!</span>
-      `;
+      console.warn("Fallo de red online al sincronizar, asegurado en LocalStorage:", err);
+      if (btn) {
+        btn.innerHTML = `
+          <span class="material-symbols-outlined text-[18px]">cloud_done</span>
+          <span>Guardado localmente</span>
+        `;
+      }
       if (toast) {
-        toast.textContent = "✓ ¡Guardado localmente y sincronizado!";
+        toast.textContent = "✓ Guardado localmente y preparado para sincronizar";
         toast.classList.remove('hidden');
       }
       setTimeout(() => {
-        btn.innerHTML = originalContent;
-        btn.disabled = false;
+        if (btn) {
+          btn.innerHTML = originalContent;
+          btn.disabled = false;
+        }
         if (toast) toast.classList.add('hidden');
       }, 2500);
     }
   }
 
-  // Inicializar cálculo en carga
-  recalculateAll();
+  // Sincronización asíncrona de lectura con Google Sheets
+  async function syncWithCloud(manual = false) {
+    const syncStatus = document.getElementById('drive-sync-status');
+    try {
+      if (syncStatus && manual) syncStatus.textContent = "Comprobando Drive...";
+      const res = await fetch(`${API_URL}?action=get_presupuesto&t=${Date.now()}`);
+      if (!res.ok) return;
+      const json = await res.json();
+      if (json && (json.ingresos || json.items)) {
+        const cloudData = json.items || json;
+        // Si hay datos remotos válidos, aplicarlos y persistir en localStorage
+        localStorage.setItem(STORAGE_KEY, JSON.stringify(cloudData));
+        renderBudgetData(cloudData);
+        if (syncStatus) syncStatus.textContent = "Drive sincronizado (ahora)";
+      }
+    } catch (e) {
+      console.log("Lectura remota opcional en background omitida o sin conexión:", e);
+    }
+  }
+
+  // Carga inicial y persistencia instantánea
+  document.addEventListener('DOMContentLoaded', () => {
+    // 1. Comprobar si existe localStorage previo
+    const localSaved = localStorage.getItem(STORAGE_KEY) || localStorage.getItem('finanzas_plantilla_presupuesto');
+    if (localSaved) {
+      try {
+        const parsed = JSON.parse(localSaved);
+        renderBudgetData(parsed);
+      } catch (e) {
+        console.error("Error parseando presupuesto local:", e);
+        recalculateAll();
+      }
+    } else {
+      // Guardar el estado base inicial en localStorage para garantizar consistencia entre rutas
+      const initial = collectCurrentData();
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(initial));
+      recalculateAll();
+    }
+
+    // 2. Consulta asíncrona no bloqueante a Google Apps Script
+    syncWithCloud(false);
+  });
 </script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="panel" href="index.html"><span class="material-symbols-outlined text-[22px]">dashboard</span><span class="font-label-md text-label-md mt-0.5">Panel</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="mes-en-curso" href="mes-en-curso.html"><span class="material-symbols-outlined text-[22px]">calendar_today</span><span class="font-label-md text-label-md mt-0.5">Mes en Curso</span></a><a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl transition-colors text-primary font-bold" data-path="presupuesto" href="presupuesto.html"><span class="material-symbols-outlined text-[22px]">account_balance_wallet</span><span class="font-label-md text-label-md mt-0.5">Presupuesto</span></a><a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="historico" href="historico.html"><span class="material-symbols-outlined text-[22px]">manage_history</span><span class="font-label-md text-label-md mt-0.5">Histórico</span></a></div></nav></body></html>
