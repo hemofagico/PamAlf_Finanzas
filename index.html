@@ -186,11 +186,11 @@
 <span class="font-headline-md text-body-md font-bold text-on-surface capitalize" id="display-periodo">Cargando...</span>
 <span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
 </div>
-<!-- Segmented View Toggle (Pamella, Alfonsso, Conjunto) -->
+<!-- Segmented View Toggle (Pamella, Alfonso, Conjunto) -->
 <div class="flex items-center bg-surface-container p-0.5 rounded-full shadow-sm text-on-surface-variant text-label-md font-label-md" id="user-filter-group">
 <button class="px-2.5 py-1 rounded-full bg-surface text-primary shadow-xs font-bold transition-all filter-btn" data-filter="Conjunto" type="button">Conjunto</button>
 <button class="px-2 py-1 rounded-full hover:text-on-surface transition-colors filter-btn" data-filter="Pamella" type="button">Pamella</button>
-<button class="px-2 py-1 rounded-full hover:text-on-surface transition-colors filter-btn" data-filter="Alfonsso" type="button">Alfonsso</button>
+<button class="px-2 py-1 rounded-full hover:text-on-surface transition-colors filter-btn" data-filter="Alfonso" type="button">Alfonso</button>
 </div>
 </div>
 <!-- Banner Alerta Inteligente -->
@@ -218,7 +218,7 @@
 <div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse flex-shrink-0"></div>
 <div class="flex flex-col min-w-0">
 <span class="font-label-caps text-label-caps text-on-surface-variant font-bold uppercase truncate">Sincronización en vivo</span>
-<span class="font-body-sm text-body-sm text-on-surface truncate" id="sync-subtext">Drive • Conectado con Pamella y Alfonsso</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate" id="sync-subtext">Drive • Conectado con Pamella y Alfonso</span>
 </div>
 </div>
 <div class="flex items-center -space-x-1.5 flex-shrink-0">
@@ -350,18 +350,21 @@
 </div>
 </main>
 <!-- Modal Registrar Nuevo Gasto -->
-<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm flex items-end sm:items-center justify-center hidden" id="modal-gasto">
-<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-2xl sm:rounded-2xl shadow-xl flex flex-col max-h-[90vh] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-<div class="flex items-center justify-between p-space-md border-b border-surface-container">
+<div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-xs overflow-y-auto hidden" id="modal-gasto">
+<div class="max-h-[90vh] sm:max-h-[85vh] flex flex-col w-full sm:max-w-md bg-white rounded-t-3xl sm:rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<!-- Encabezado fijo arriba -->
+<div class="flex-shrink-0 p-4 border-b border-surface-container flex justify-between items-center bg-white">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary text-[24px]">receipt_long</span>
 <h3 class="font-headline-md text-headline-md font-bold text-on-surface">Registrar Nuevo Gasto</h3>
 </div>
-<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" id="btn-close-modal" type="button">
+<button aria-label="Cerrar modal" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" id="btn-close-modal" type="button">
 <span class="material-symbols-outlined text-[20px]">close</span>
 </button>
 </div>
-<form class="p-space-md flex flex-col gap-space-sm overflow-y-auto" id="form-nuevo-gasto">
+<form class="flex flex-col flex-1 min-h-0 overflow-hidden" id="form-nuevo-gasto">
+<!-- Cuerpo con scroll fluido para cualquier pantalla móvil -->
+<div class="flex-1 overflow-y-auto p-4 space-y-4 overscroll-contain">
 <div>
 <label class="block font-label-md text-label-md text-on-surface-variant mb-1">Concepto / Comercio</label>
 <input class="w-full px-3 py-2.5 rounded-xl border border-outline-variant bg-surface text-on-surface font-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" id="input-concepto" placeholder="Ej. Supermercado, Luz, Repsol..." required="" type="text"/>
@@ -382,14 +385,19 @@
 <label class="block font-label-md text-label-md text-on-surface-variant mb-1">Pagado por / Usuario</label>
 <div class="grid grid-cols-3 gap-2" id="selector-pagador">
 <button class="payer-opt py-2 px-3 rounded-xl border border-primary bg-primary/10 text-primary font-label-md font-bold text-center" data-payer="Pamella" type="button">Pamella</button>
-<button class="payer-opt py-2 px-3 rounded-xl border border-outline-variant hover:bg-surface text-on-surface-variant font-label-md text-center" data-payer="Alfonsso" type="button">Alfonsso</button>
+<button class="payer-opt py-2 px-3 rounded-xl border border-outline-variant hover:bg-surface text-on-surface-variant font-label-md text-center" data-payer="Alfonso" type="button">Alfonso</button>
 <button class="payer-opt py-2 px-3 rounded-xl border border-outline-variant hover:bg-surface text-on-surface-variant font-label-md text-center" data-payer="50/50" type="button">50/50</button>
 </div>
 </div>
-<div class="pt-2">
-<button class="w-full h-12 bg-primary text-on-primary rounded-xl font-label-lg font-bold shadow-md hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2" id="btn-submit-gasto" type="submit">
+</div>
+<!-- Pie fijo inferior con botones siempre visibles y accesibles -->
+<div class="flex-shrink-0 p-4 pb-6 sm:pb-4 border-t border-surface-container bg-slate-50 flex gap-3 pb-safe">
+<button class="flex-1 h-12 border border-outline-variant text-on-surface-variant rounded-xl font-label-lg font-bold hover:bg-surface active:scale-[0.98] transition-all flex items-center justify-center gap-1" id="btn-cancel-modal" type="button">
+<span>Cancelar</span>
+</button>
+<button class="flex-[1.5] h-12 bg-primary text-on-primary rounded-xl font-label-lg font-bold shadow-md hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2" id="btn-submit-gasto" type="submit">
 <span class="material-symbols-outlined text-[20px]">save</span>
-<span>Guardar y Sincronizar</span>
+<span>Guardar Gasto</span>
 </button>
 </div>
 </form>
@@ -585,7 +593,7 @@
       const select = document.getElementById('input-categoria');
       if (!select) return;
       select.innerHTML = '';
-      DEFAULT_PREPRES_GRUPOS = [
+      const defaultGrupos = [
         'Vivienda',
         'Suministros / Fijos',
         'Deudas',
@@ -594,7 +602,7 @@
         'Fondo Vehículos',
         'Otros / Imprevistos'
       ];
-      DEFAULT_PREPRES_GRUPOS.forEach(grp => {
+      defaultGrupos.forEach(grp => {
         const opt = document.createElement('option');
         opt.value = grp;
         opt.textContent = grp;
@@ -764,7 +772,7 @@
           
           const icon = getCategoryIcon(t.categoria || t.grupo);
           const pagador = t.pagador || t.quien || t.usuario || 'Pamella';
-          const badgeClass = pagador.toLowerCase().includes('alfonsso') 
+          const badgeClass = pagador.toLowerCase().includes('Alfonso') 
             ? 'bg-secondary-container text-secondary' 
             : (pagador.toLowerCase().includes('50') ? 'bg-tertiary/20 text-tertiary' : 'bg-primary-container/20 text-primary');
 
@@ -804,7 +812,14 @@
       modalGasto.classList.add('hidden');
     });
 
-    // Selector de Pagador en Modal (Pamella / Alfonsso / 50/50)
+    const btnCancelModal = document.getElementById('btn-cancel-modal');
+    if (btnCancelModal) {
+      btnCancelModal.addEventListener('click', () => {
+        modalGasto.classList.add('hidden');
+      });
+    }
+
+    // Selector de Pagador en Modal (Pamella / Alfonso / 50/50)
     document.querySelectorAll('.payer-opt').forEach(btn => {
       btn.addEventListener('click', function() {
         document.querySelectorAll('.payer-opt').forEach(b => {
