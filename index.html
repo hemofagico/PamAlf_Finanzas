@@ -8,6 +8,7 @@
 <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
 <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
 <script src="config.js"></script>
+<script src="finanzas-sync.js"></script>
 <script id="tailwind-config">
     tailwind.config = {
       darkMode: "class",
@@ -151,7 +152,7 @@
 <header class="fixed top-0 w-full z-50 bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] pt-safe">
 <div class="h-16 px-margin flex items-center justify-between gap-space-sm">
 <div class="flex items-center gap-space-sm min-w-0">
-<img alt="Finanzas Claras Logo" class="h-8 w-auto object-contain flex-shrink-0" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida/AEtjO1VrOz8-qRmrF7v89p5DZVz-BEqfHctph7i6k91pJH0UTHLENZgTm6U1TFXmtBbfQuLlqhtwOCBXl_PuDrLBcm1HG4p9cD4gcxsvDwiCFkRpBrtj8FTQLYPdQHO8hwMz2IPResqK6tvE4wNlV1VGXvDVJYBT_4XmlaT9Cvi4k42Kwc3bBoXYoyS8an5rODY_LC93u7-ermdocGE4X5pFNQcxPgCvyRWoGFayxoV_SYWjcDoUntcBH27Wcc8r';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4DBkkR__amxn-Kk9LxOeGCbXoa5Vhr2gRz48h5uz6m42Q8s5gDj8HhRe8mGVd8o-UnwfmA0hwHa69OFvq9X-hBx0lGztfoVqvnWd21t1CleeMsLyOvInhfUGCxGnYMinhYOqwKpgegEdGg5kWnHlV-iTCjqXFHM-HFxyXN3RXH8ESLJoCQ_6g25UDTV1ALDsSFNDqhmhXGDTPw_hlHgKRRN8SPrevx_eI2YlXXfw3"/>
+<img alt="Finanzas Claras Logo" class="h-8 w-auto object-contain flex-shrink-0" onerror="this.onerror=null; this.src='https://lh3.googleusercontent.com/aida-public/AB6AXuA4DBkkR__amxn-Kk9LxOeGCbXoa5Vhr2gRz48h5uz6m42Q8s5gDj8HhRe8mGVd8o-UnwfmA0hwHa69OFvq9X-hBx0lGztfoVqvnWd21t1CleeMsLyOvInhfUGCxGnYMinhYOqwKpgegEdGg5kWnHlV-iTCjqXFHM-HFxyXN3RXH8ESLJoCQ_6g25UDTV1ALDsSFNDqhmhXGDTPw_hlHgKRRN8SPrevx_eI2YlXXfw3';" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBoAFi0trUOl9MxJ2SVuRU4jwMcZ1vZOfJlpjf7B1ZR6-5rAxtI1gtnMdLfqF6qRNvoU62h1uNZK91ZY02eFzv7PHY8mlZaZWmq82r-uPnIBKR2lLqDniqNP14nBywaY3RLtd942MX6l_fHD8frsv4EcBuH53umOuhjnSSROkDfVuvY5W3G9oerwXL8MwVjpLZWgd0w0WgbOIfGyhnrW5alr3RyJZnBVYQZNWLseS_6"/>
 <div class="flex flex-col min-w-0">
 <div class="flex items-center gap-space-xs">
 <span class="font-headline-md text-headline-md text-on-surface truncate">Finanzas Claras</span>
@@ -181,16 +182,16 @@
 <!-- Selector de Período y Filtro de Pareja -->
 <div class="flex flex-col gap-space-xs mt-space-sm">
 <div class="flex items-center justify-between">
-<div class="flex items-center gap-space-xs bg-surface-container px-3 py-1.5 rounded-full shadow-sm cursor-pointer" onclick="window.location.href='mes-en-curso.html'">
+<div class="flex items-center gap-space-xs bg-surface-container px-3 py-1.5 rounded-full shadow-sm cursor-pointer" onclick="navigateSafely('mes-en-curso.html')">
 <span class="material-symbols-outlined text-[18px] text-primary" style="font-variation-settings: 'FILL' 1;">calendar_month</span>
-<span class="font-headline-md text-body-md font-bold text-on-surface capitalize" id="display-periodo">Cargando...</span>
+<span class="font-headline-md text-body-md font-bold text-on-surface capitalize" id="display-periodo">Octubre 2026</span>
 <span class="material-symbols-outlined text-[16px] text-on-surface-variant">expand_more</span>
 </div>
-<!-- Segmented View Toggle (Pamella, Alfonsso, Conjunto) -->
+<!-- Segmented View Toggle (Conjunto, Pamella, Alfonso) -->
 <div class="flex items-center bg-surface-container p-0.5 rounded-full shadow-sm text-on-surface-variant text-label-md font-label-md" id="user-filter-group">
 <button class="px-2.5 py-1 rounded-full bg-surface text-primary shadow-xs font-bold transition-all filter-btn" data-filter="Conjunto" type="button">Conjunto</button>
 <button class="px-2 py-1 rounded-full hover:text-on-surface transition-colors filter-btn" data-filter="Pamella" type="button">Pamella</button>
-<button class="px-2 py-1 rounded-full hover:text-on-surface transition-colors filter-btn" data-filter="Alfonsso" type="button">Alfonsso</button>
+<button class="px-2 py-1 rounded-full hover:text-on-surface transition-colors filter-btn" data-filter="Alfonso" type="button">Alfonso</button>
 </div>
 </div>
 <!-- Banner Alerta Inteligente -->
@@ -218,7 +219,7 @@
 <div class="w-2.5 h-2.5 rounded-full bg-primary animate-pulse flex-shrink-0"></div>
 <div class="flex flex-col min-w-0">
 <span class="font-label-caps text-label-caps text-on-surface-variant font-bold uppercase truncate">Sincronización en vivo</span>
-<span class="font-body-sm text-body-sm text-on-surface truncate" id="sync-subtext">Drive • Conectado con Pamella y Alfonsso</span>
+<span class="font-body-sm text-body-sm text-on-surface truncate" id="sync-subtext">Drive • Conectado con Pamella y Alfonso</span>
 </div>
 </div>
 <div class="flex items-center -space-x-1.5 flex-shrink-0">
@@ -235,11 +236,11 @@
 <span class="font-label-caps text-label-caps uppercase text-on-surface-variant tracking-wider">Ahorro y Saldo Disponible</span>
 <span class="inline-flex items-center gap-1 font-label-md text-label-md font-bold px-2 py-0.5 rounded-full bg-primary/10 text-primary" id="badge-margen">
 <span class="material-symbols-outlined text-[14px]">trending_up</span>
-<span id="margen-val">100% margen</span>
+<span id="margen-val">0% margen</span>
 </span>
 </div>
 <div class="flex items-baseline gap-2">
-<span class="font-metric-display-mobile text-metric-display-mobile text-primary font-bold tracking-tight" id="saldo-disponible">0,00 €</span>
+<span class="font-metric-display-mobile text-metric-display-mobile text-primary font-bold tracking-tight" id="saldo-disponible">+0,00 €</span>
 <span class="font-body-sm text-body-sm text-on-surface-variant">de holgura</span>
 </div>
 <!-- Barra de Salud Financiera -->
@@ -285,7 +286,7 @@
 <span class="material-symbols-outlined text-[20px]">add_circle</span>
 <span class="truncate">+ Añadir Gasto</span>
 </button>
-<button class="flex items-center justify-center gap-space-xs h-12 bg-surface-container-high text-on-surface rounded-xl font-label-lg text-label-lg font-bold shadow-xs hover:bg-surface-variant active:scale-[0.98] transition-all" onclick="window.location.href='mes-en-curso.html'" type="button">
+<button class="flex items-center justify-center gap-space-xs h-12 bg-surface-container-high text-on-surface rounded-xl font-label-lg text-label-lg font-bold shadow-xs hover:bg-surface-variant active:scale-[0.98] transition-all" onclick="navigateSafely('mes-en-curso.html')" type="button">
 <span class="material-symbols-outlined text-[20px] text-primary">visibility</span>
 <span class="truncate">Ver Mes en Curso</span>
 </button>
@@ -297,7 +298,7 @@
 <h2 class="font-headline-md text-headline-md font-bold text-on-surface">Desglose de Gastos</h2>
 <p class="font-body-sm text-body-sm text-on-surface-variant" id="categorias-activas-count">0 categorías activas este mes</p>
 </div>
-<span class="font-label-caps text-label-caps uppercase bg-surface-container px-2 py-1 rounded-full text-on-surface-variant font-bold" id="donut-total-badge">0,00 €</span>
+<span class="font-label-caps text-label-caps uppercase bg-surface-container px-2 py-1 rounded-full text-on-surface-variant font-bold" id="donut-total-badge">0,00 € / 0,00 € techo</span>
 </div>
 <!-- SVG Donut Chart + Visual Breakdown -->
 <div class="flex items-center gap-space-md">
@@ -306,10 +307,7 @@
 <circle cx="50" cy="50" fill="none" r="38" stroke="#eff4ff" stroke-width="14"></circle>
 <!-- Segmentos dinámicos generados por JS -->
 </svg>
-<div class="absolute flex flex-col items-center justify-center text-center">
-<span class="font-label-caps text-label-caps text-on-surface-variant uppercase">Total</span>
-<span class="font-headline-md text-headline-md font-bold text-on-surface" id="donut-center-total">0 €</span>
-</div>
+<div class="absolute flex flex-col items-center justify-center text-center"><span class="font-label-caps text-label-caps text-on-surface-variant uppercase text-[10px]">Total</span><span class="font-headline-md text-headline-md font-bold text-on-surface leading-none my-0.5" id="donut-center-total">0 €</span><span class="font-label-caps text-label-caps text-primary font-bold text-[10px] truncate max-w-[80px]" id="donut-center-sub">0% techo</span></div>
 </div>
 <!-- Leyenda compacta -->
 <div class="flex-1 flex flex-col gap-1.5 min-w-0" id="donut-legend-container">
@@ -325,7 +323,7 @@
 <span class="font-label-caps text-label-caps text-primary font-bold uppercase">Gasto vs Techo</span>
 </div>
 <div class="flex flex-col gap-3" id="budget-progress-container">
-<!-- Categorías generadas por JS sin hardcode -->
+<!-- 7 Categorías generadas por JS dinámicamente con metricas.grupos -->
 </div>
 </div>
 <!-- Últimos Movimientos Registrados en el Hogar -->
@@ -350,18 +348,21 @@
 </div>
 </main>
 <!-- Modal Registrar Nuevo Gasto -->
-<div class="fixed inset-0 z-50 bg-on-surface/40 backdrop-blur-sm flex items-end sm:items-center justify-center hidden" id="modal-gasto">
-<div class="bg-surface-container-lowest w-full max-w-lg rounded-t-2xl sm:rounded-2xl shadow-xl flex flex-col max-h-[90vh] overflow-hidden animate-in fade-in zoom-in-95 duration-200">
-<div class="flex items-center justify-between p-space-md border-b border-surface-container">
+<div class="fixed inset-0 z-50 flex items-end sm:items-center justify-center p-0 sm:p-4 bg-black/60 backdrop-blur-xs overflow-y-auto hidden" id="modal-gasto">
+<div class="max-h-[85vh] flex flex-col w-full sm:max-w-md bg-white rounded-t-3xl sm:rounded-2xl shadow-2xl overflow-hidden animate-in fade-in zoom-in-95 duration-200">
+<!-- Encabezado fijo arriba -->
+<div class="flex-shrink-0 p-4 border-b border-surface-container flex justify-between items-center bg-white">
 <div class="flex items-center gap-2">
 <span class="material-symbols-outlined text-primary text-[24px]">receipt_long</span>
 <h3 class="font-headline-md text-headline-md font-bold text-on-surface">Registrar Nuevo Gasto</h3>
 </div>
-<button class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" id="btn-close-modal" type="button">
+<button aria-label="Cerrar modal" class="w-8 h-8 rounded-full flex items-center justify-center text-on-surface-variant hover:bg-surface-container transition-colors" id="btn-close-modal" type="button">
 <span class="material-symbols-outlined text-[20px]">close</span>
 </button>
 </div>
-<form class="p-space-md flex flex-col gap-space-sm overflow-y-auto" id="form-nuevo-gasto">
+<form class="flex flex-col flex-1 min-h-0 overflow-hidden" id="form-nuevo-gasto">
+<!-- Cuerpo con scroll fluido para cualquier pantalla móvil -->
+<div class="flex-1 overflow-y-auto p-4 space-y-4 overscroll-contain">
 <div>
 <label class="block font-label-md text-label-md text-on-surface-variant mb-1">Concepto / Comercio</label>
 <input class="w-full px-3 py-2.5 rounded-xl border border-outline-variant bg-surface text-on-surface font-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" id="input-concepto" placeholder="Ej. Supermercado, Luz, Repsol..." required="" type="text"/>
@@ -374,7 +375,7 @@
 <div>
 <label class="block font-label-md text-label-md text-on-surface-variant mb-1">Grupo de Gasto</label>
 <select class="w-full px-3 py-2.5 rounded-xl border border-outline-variant bg-surface text-on-surface font-body-md focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent" id="input-categoria">
-<!-- Dinámicamente llenado con los grupos del presupuesto -->
+<!-- Dinámicamente llenado con los 7 grupos de gasto -->
 </select>
 </div>
 </div>
@@ -382,14 +383,19 @@
 <label class="block font-label-md text-label-md text-on-surface-variant mb-1">Pagado por / Usuario</label>
 <div class="grid grid-cols-3 gap-2" id="selector-pagador">
 <button class="payer-opt py-2 px-3 rounded-xl border border-primary bg-primary/10 text-primary font-label-md font-bold text-center" data-payer="Pamella" type="button">Pamella</button>
-<button class="payer-opt py-2 px-3 rounded-xl border border-outline-variant hover:bg-surface text-on-surface-variant font-label-md text-center" data-payer="Alfonsso" type="button">Alfonsso</button>
+<button class="payer-opt py-2 px-3 rounded-xl border border-outline-variant hover:bg-surface text-on-surface-variant font-label-md text-center" data-payer="Alfonso" type="button">Alfonso</button>
 <button class="payer-opt py-2 px-3 rounded-xl border border-outline-variant hover:bg-surface text-on-surface-variant font-label-md text-center" data-payer="50/50" type="button">50/50</button>
 </div>
 </div>
-<div class="pt-2">
-<button class="w-full h-12 bg-primary text-on-primary rounded-xl font-label-lg font-bold shadow-md hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2" id="btn-submit-gasto" type="submit">
+</div>
+<!-- Pie fijo inferior con botones siempre visibles y accesibles -->
+<div class="flex-shrink-0 p-4 pb-6 sm:pb-4 border-t border-surface-container bg-slate-50 flex gap-3 pb-safe">
+<button class="flex-1 h-12 border border-outline-variant text-on-surface-variant rounded-xl font-label-lg font-bold hover:bg-surface active:scale-[0.98] transition-all flex items-center justify-center gap-1" id="btn-cancel-modal" type="button">
+<span>Cancelar</span>
+</button>
+<button class="flex-[1.5] h-12 bg-primary text-on-primary rounded-xl font-label-lg font-bold shadow-md hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2" id="btn-submit-gasto" type="submit">
 <span class="material-symbols-outlined text-[20px]">save</span>
-<span>Guardar y Sincronizar</span>
+<span>Guardar Gasto</span>
 </button>
 </div>
 </form>
@@ -411,7 +417,7 @@
 <!-- Listado completo -->
 </div>
 <div class="p-space-sm border-t border-surface-container bg-surface-container-lowest flex justify-end">
-<button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface font-label-md font-bold hover:bg-surface-container-high transition-colors" onclick="window.location.href='mes-en-curso.html'" type="button">
+<button class="px-4 py-2 rounded-xl bg-surface-container text-on-surface font-label-md font-bold hover:bg-surface-container-high transition-colors" onclick="navigateSafely('mes-en-curso.html')" type="button">
           Ir a detalle de Mes en Curso
         </button>
 </div>
@@ -420,156 +426,46 @@
 <!-- Bottom Navigation -->
 <nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.05)]" data-active-classes="text-primary font-bold">
 <div class="flex justify-around items-center h-16 px-space-xs">
-<a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl transition-colors text-primary font-bold" data-path="panel" href="index.html">
+<a aria-current="page" class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl transition-colors text-primary font-bold nav-link" data-path="panel" href="index.html">
 <span class="material-symbols-outlined text-[22px]">dashboard</span>
 <span class="font-label-md text-label-md mt-0.5">Panel</span>
 </a>
-<a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="mes-en-curso" href="mes-en-curso.html">
+<a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors nav-link" data-path="mes-en-curso" href="mes-en-curso.html">
 <span class="material-symbols-outlined text-[22px]">calendar_today</span>
 <span class="font-label-md text-label-md mt-0.5">Mes en Curso</span>
 </a>
-<a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="presupuesto" href="presupuesto.html">
+<a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors nav-link" data-path="presupuesto" href="presupuesto.html">
 <span class="material-symbols-outlined text-[22px]">account_balance_wallet</span>
 <span class="font-label-md text-label-md mt-0.5">Presupuesto</span>
 </a>
-<a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors" data-path="historico" href="historico.html">
+<a class="flex flex-col items-center justify-center min-w-[64px] h-12 rounded-xl text-on-surface-variant hover:text-on-surface transition-colors nav-link" data-path="historico" href="historico.html">
 <span class="material-symbols-outlined text-[22px]">manage_history</span>
 <span class="font-label-md text-label-md mt-0.5">Histórico</span>
 </a>
 </div>
 </nav>
 <script>
-    const API_URL = (typeof CONFIG !== 'undefined' && CONFIG.API_URL) ? CONFIG.API_URL : "https://script.google.com/macros/s/AKfycbw3hk0W8vEJ7P3th2YnpMVEgtOm1f3ia5sNllQFG_QUIcVfMsFj7pwVisXCfeuDwXJY/exec";
-
-    // Grupos estándar requeridos según la estructura del presupuesto
-    const DEFAULT_PRESUPUESTO_GRUPOS = [
-      { nombre: 'Vivienda', limite: 0, icono: 'home', color: '#00685f' },
-      { nombre: 'Suministros / Fijos', limite: 0, icono: 'bolt', color: '#565e74' },
-      { nombre: 'Deudas', limite: 0, icono: 'credit_card', color: '#a36700' },
-      { nombre: 'Vida Diaria', limite: 0, icono: 'shopping_bag', color: '#008378' },
-      { nombre: 'Impuestos + Gastos Vivienda', limite: 0, icono: 'receipt_long', color: '#bec6e0' },
-      { nombre: 'Fondo Vehículos', limite: 0, icono: 'directions_car', color: '#825100' },
-      { nombre: 'Otros / Imprevistos', limite: 0, icono: 'pending', color: '#6d7a77' }
+    const GRUPOS_DEF = [
+      { nombre: 'Vivienda', icono: 'home', color: '#00685f' },
+      { nombre: 'Suministros / Fijos', icono: 'bolt', color: '#565e74' },
+      { nombre: 'Deudas', icono: 'credit_card', color: '#a36700' },
+      { nombre: 'Vida Diaria', icono: 'shopping_bag', color: '#008378' },
+      { nombre: 'Impuestos + Gastos Vivienda', icono: 'receipt_long', color: '#bec6e0' },
+      { nombre: 'Fondo Vehículos', icono: 'directions_car', color: '#825100' },
+      { nombre: 'Otros / Imprevistos', icono: 'pending', color: '#6d7a77' }
     ];
 
+    let appState = null;
     let currentFilter = 'Conjunto';
     let selectedPayer = 'Pamella';
 
-    // Obtener mes dinámico
-    function getMesActual() {
-      const stored = localStorage.getItem('finanzas_mes_actual');
-      if (stored && stored.trim() !== '') return stored;
-      const now = new Date();
-      const mes = now.toLocaleDateString('es-ES', { month: 'long', year: 'numeric' });
-      return mes.charAt(0).toUpperCase() + mes.slice(1);
-    }
-
-    // Normalizador de nombres de grupo
-    function normalizeGroupName(str) {
-      if (!str) return 'Otros / Imprevistos';
-      const clean = str.trim().toLowerCase();
-      if (clean.includes('vivienda') && (clean.includes('impuesto') || clean.includes('gasto'))) return 'Impuestos + Gastos Vivienda';
-      if (clean.includes('vivienda')) return 'Vivienda';
-      if (clean.includes('suministro') || clean.includes('fijo')) return 'Suministros / Fijos';
-      if (clean.includes('deuda')) return 'Deudas';
-      if (clean.includes('vida') || clean.includes('diaria') || clean.includes('supermercado')) return 'Vida Diaria';
-      if (clean.includes('vehiculo') || clean.includes('coche') || clean.includes('transporte')) return 'Fondo Vehículos';
-      if (clean.includes('imprevisto') || clean.includes('otro')) return 'Otros / Imprevistos';
-      return str;
-    }
-
-    // Obtener presupuesto base de localStorage agrupando de forma dinámica
-    function getPresupuestoBase() {
-      const stored = localStorage.getItem('finanzas_presupuesto_base');
-      let ingresosTotales = 0;
-      let limiteGastos = 0;
-
-      // Base clone
-      const gruposMap = {};
-      DEFAULT_PRESUPUESTO_GRUPOS.forEach(g => {
-        gruposMap[g.nombre] = { ...g, limite: 0 };
-      });
-
-      if (stored) {
-        try {
-          const parsed = JSON.parse(stored);
-          if (parsed && typeof parsed === 'object') {
-            ingresosTotales = Number(parsed.ingresosTotales || parsed.ingresos || 0);
-
-            // Si vienen partidas detalladas (ej. partidas: [{ categoria: 'Vivienda', importe: 850 }])
-            if (Array.isArray(parsed.partidas)) {
-              parsed.partidas.forEach(p => {
-                const grp = normalizeGroupName(p.categoria || p.grupo || p.seccion || 'Otros / Imprevistos');
-                const monto = parseFloat(p.importe || p.limite || p.monto || 0) || 0;
-                if (!gruposMap[grp]) {
-                  gruposMap[grp] = { nombre: grp, limite: 0, icono: 'category', color: '#565e74' };
-                }
-                gruposMap[grp].limite += monto;
-              });
-            } else if (Array.isArray(parsed.categorias) || Array.isArray(parsed.grupos)) {
-              const items = parsed.categorias || parsed.grupos;
-              items.forEach(c => {
-                const grp = normalizeGroupName(c.nombre || c.categoria || 'Otros / Imprevistos');
-                const monto = parseFloat(c.limite || c.importe || c.monto || 0) || 0;
-                if (!gruposMap[grp]) {
-                  gruposMap[grp] = { nombre: grp, limite: 0, icono: c.icono || 'category', color: c.color || '#565e74' };
-                }
-                gruposMap[grp].limite += monto;
-              });
-            } else if (parsed.secciones && typeof parsed.secciones === 'object') {
-              Object.entries(parsed.secciones).forEach(([key, val]) => {
-                const grp = normalizeGroupName(key);
-                const monto = parseFloat(val) || 0;
-                if (gruposMap[grp]) gruposMap[grp].limite += monto;
-              });
-            }
-
-            limiteGastos = Number(parsed.limiteGastos || parsed.limite || Object.values(gruposMap).reduce((acc, g) => acc + g.limite, 0));
-          }
-        } catch (e) {
-          console.warn("Error parsing finanzas_presupuesto_base", e);
-        }
-      }
-
-      // Si no hay partidas pero límite general existe, o cálculo directo
-      if (limiteGastos === 0) {
-        limiteGastos = Object.values(gruposMap).reduce((acc, g) => acc + g.limite, 0);
-      }
-
-      return {
-        ingresosTotales,
-        limiteGastos,
-        categorias: Object.values(gruposMap)
-      };
-    }
-
-    // Obtener tickets de gasto del mes (finanzas_tickets_mes prioritario)
-    function getTickets() {
-      const raw = localStorage.getItem('finanzas_tickets_mes') || localStorage.getItem('tickets_mes') || localStorage.getItem('finanzas_gastos_actuales');
-      if (!raw) return [];
-      try {
-        const parsed = JSON.parse(raw);
-        if (Array.isArray(parsed)) return parsed;
-      } catch (e) {
-        console.error("Error al leer tickets", e);
-      }
-      return [];
-    }
-
-    // Guardar tickets en localStorage
-    function saveTickets(tickets) {
-      localStorage.setItem('finanzas_tickets_mes', JSON.stringify(tickets));
-      localStorage.setItem('tickets_mes', JSON.stringify(tickets));
-      localStorage.setItem('finanzas_gastos_actuales', JSON.stringify(tickets));
-    }
-
-    // Formatear moneda
     function formatEUR(val) {
       return Number(val || 0).toLocaleString('es-ES', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
     }
 
-    // Icono correspondiente a categoría
     function getCategoryIcon(cat) {
+      const match = GRUPOS_DEF.find(g => g.nombre.toLowerCase() === (cat || '').trim().toLowerCase());
+      if (match) return match.icono;
       const c = (cat || '').toLowerCase();
       if (c.includes('vivienda') && (c.includes('impuesto') || c.includes('gasto'))) return 'receipt_long';
       if (c.includes('vivienda')) return 'home';
@@ -580,96 +476,123 @@
       return 'pending';
     }
 
-    // Poblar dropdown de categorías del modal
     function populateCategorySelect() {
       const select = document.getElementById('input-categoria');
       if (!select) return;
       select.innerHTML = '';
-      DEFAULT_PREPRES_GRUPOS = [
-        'Vivienda',
-        'Suministros / Fijos',
-        'Deudas',
-        'Vida Diaria',
-        'Impuestos + Gastos Vivienda',
-        'Fondo Vehículos',
-        'Otros / Imprevistos'
-      ];
-      DEFAULT_PREPRES_GRUPOS.forEach(grp => {
+      GRUPOS_DEF.forEach(grp => {
         const opt = document.createElement('option');
-        opt.value = grp;
-        opt.textContent = grp;
+        opt.value = grp.nombre;
+        opt.textContent = grp.nombre;
         select.appendChild(opt);
       });
     }
 
-    // Render principal
+    // Navegación segura guardando estado
+    function navigateSafely(url) {
+      if (window.FinanzasSync && appState) {
+        window.FinanzasSync.saveState(appState, true);
+      }
+      window.location.href = url;
+    }
+
+    // Render principal conectando con FinanzasSync
     function renderDashboard() {
-      const mesActual = getMesActual();
-      document.getElementById('display-periodo').textContent = mesActual;
+      if (!appState && window.FinanzasSync) {
+        appState = window.FinanzasSync.loadState();
+      }
+      if (!appState) return;
 
-      const pBase = getPresupuestoBase();
-      const allTickets = getTickets();
-
-      // Filtrar según miembro
-      let ticketsFiltrados = allTickets;
-      if (currentFilter !== 'Conjunto') {
-        ticketsFiltrados = allTickets.filter(t => (t.pagador || t.quien || t.usuario || '').toLowerCase().includes(currentFilter.toLowerCase()));
+      // Actualizar visualización del período
+      const displayPeriodo = document.getElementById('display-periodo');
+      if (displayPeriodo) {
+        displayPeriodo.textContent = appState.mesActual || 'Octubre 2026';
       }
 
-      const totalGastado = ticketsFiltrados.reduce((acc, t) => acc + (parseFloat(t.importe || t.monto || 0) || 0), 0);
-      const ingresosTotales = pBase.ingresosTotales;
-      const limiteGastos = pBase.limiteGastos;
-      const saldoDisponible = ingresosTotales - totalGastado;
+      // Cálculo de métricas
+      const metricas = (window.FinanzasSync && typeof window.FinanzasSync.calcularMetricas === 'function')
+        ? window.FinanzasSync.calcularMetricas(appState)
+        : {
+            totalIngresos: 0,
+            totalTechoGastos: 0,
+            totalGastadoMes: 0,
+            saldoActual: 0,
+            pctGastadoGlobal: 0,
+            grupos: GRUPOS_DEF.map(g => ({ nombre: g.nombre, icono: g.icono, techo: 0, gastado: 0, restante: 0, porcentaje: 0 }))
+          };
 
-      // Métricas cards
-      document.getElementById('ingresos-val').textContent = formatEUR(ingresosTotales);
-      document.getElementById('gastos-val').textContent = formatEUR(totalGastado);
-      document.getElementById('limite-gasto-val').textContent = 'Límite: ' + formatEUR(limiteGastos);
+      // Filtrado por usuario
+      let ticketsFiltrados = appState.ticketsMes || [];
+      if (currentFilter !== 'Conjunto') {
+        ticketsFiltrados = ticketsFiltrados.filter(t => 
+          (t.pagador || t.quien || t.usuario || '').toLowerCase().includes(currentFilter.toLowerCase())
+        );
+      }
+
+      const totalGastadoFiltrado = (currentFilter === 'Conjunto')
+        ? metricas.totalGastadoMes
+        : ticketsFiltrados.reduce((acc, t) => acc + (parseFloat(t.importe || t.monto || 0) || 0), 0);
+
+      const totalIngresos = metricas.totalIngresos || 0;
+      const totalTechoGastos = metricas.totalTechoGastos || 0;
+      const saldoDisponible = totalIngresos - totalGastadoFiltrado;
+
+      // Tarjetas de Métricas
+      document.getElementById('ingresos-val').textContent = formatEUR(totalIngresos);
+      document.getElementById('gastos-val').textContent = formatEUR(totalGastadoFiltrado);
+      document.getElementById('limite-gasto-val').textContent = 'Límite: ' + formatEUR(totalTechoGastos);
       document.getElementById('saldo-disponible').textContent = (saldoDisponible >= 0 ? '+' : '') + formatEUR(saldoDisponible);
 
-      // Margen y Barra
-      const pctConsumo = limiteGastos > 0 ? Math.min(100, Math.round((totalGastado / limiteGastos) * 100)) : (totalGastado > 0 ? 100 : 0);
-      const pctMargen = ingresosTotales > 0 ? Math.round(((ingresosTotales - totalGastado) / ingresosTotales) * 100) : 0;
+      // Margen y Barra de Salud Financiera
+      const pctConsumo = totalTechoGastos > 0 ? Math.min(100, Math.round((totalGastadoFiltrado / totalTechoGastos) * 100)) : (totalGastadoFiltrado > 0 ? 100 : 0);
+      const pctMargen = totalIngresos > 0 ? Math.round(((totalIngresos - totalGastadoFiltrado) / totalIngresos) * 100) : 0;
       
       document.getElementById('margen-val').textContent = (pctMargen < 0 ? '0' : pctMargen) + '% margen';
       document.getElementById('porcentaje-gasto-label').textContent = pctConsumo + '% presupuestado';
-      document.getElementById('barra-consumo-general').style.width = pctConsumo + '%';
       
+      const barraConsumo = document.getElementById('barra-consumo-general');
+      barraConsumo.style.width = pctConsumo + '%';
       if (pctConsumo >= 90) {
-        document.getElementById('barra-consumo-general').className = 'h-full bg-error rounded-full transition-all duration-500';
+        barraConsumo.className = 'h-full bg-error rounded-full transition-all duration-500';
       } else if (pctConsumo >= 75) {
-        document.getElementById('barra-consumo-general').className = 'h-full bg-tertiary rounded-full transition-all duration-500';
+        barraConsumo.className = 'h-full bg-tertiary rounded-full transition-all duration-500';
       } else {
-        document.getElementById('barra-consumo-general').className = 'h-full bg-primary rounded-full transition-all duration-500';
+        barraConsumo.className = 'h-full bg-primary rounded-full transition-all duration-500';
       }
 
-      // Agrupación por categorías para Donut y Listado
+      // Desglose de Gastos (Donut & Leyenda)
       const catTotals = {};
       ticketsFiltrados.forEach(t => {
-        const cat = normalizeGroupName(t.categoria || t.grupo || 'Otros / Imprevistos');
+        const cat = (t.categoria || t.grupo || 'Otros / Imprevistos').trim();
         catTotals[cat] = (catTotals[cat] || 0) + (parseFloat(t.importe || t.monto || 0) || 0);
       });
 
       const catEntries = Object.entries(catTotals).filter(([_, v]) => v > 0);
       document.getElementById('categorias-activas-count').textContent = catEntries.length + ' categoría' + (catEntries.length === 1 ? '' : 's') + ' activas este mes';
-      document.getElementById('donut-total-badge').textContent = formatEUR(totalGastado);
-      document.getElementById('donut-center-total').textContent = (totalGastado >= 1000 ? (totalGastado/1000).toFixed(1) + 'k€' : Math.round(totalGastado) + ' €');
+      
+      document.getElementById('donut-total-badge').textContent = `${formatEUR(totalGastadoFiltrado)} / ${formatEUR(totalTechoGastos)} techo`;
 
-      // Generar SVG Donut
+      const pctDonut = totalTechoGastos > 0 ? Math.round((totalGastadoFiltrado / totalTechoGastos) * 100) : (totalGastadoFiltrado > 0 ? 100 : 0);
+      document.getElementById('donut-center-total').textContent = (totalGastadoFiltrado === 0) 
+        ? '0 €' 
+        : (totalGastadoFiltrado >= 1000 ? (totalGastadoFiltrado/1000).toFixed(1) + 'k€' : Math.round(totalGastadoFiltrado) + ' €');
+      document.getElementById('donut-center-sub').textContent = `${pctDonut}% techo`;
+
+      // SVG Donut
       const donutSvg = document.getElementById('donut-svg');
       donutSvg.innerHTML = '<circle cx="50" cy="50" fill="none" r="38" stroke="#eff4ff" stroke-width="14"></circle>';
       const donutLegend = document.getElementById('donut-legend-container');
       donutLegend.innerHTML = '';
 
       const colors = ['#00685f', '#008378', '#565e74', '#a36700', '#bec6e0', '#825100', '#6d7a77'];
-      const circumference = 2 * Math.PI * 38; // ~238.76
+      const circumference = 2 * Math.PI * 38;
 
       if (catEntries.length === 0) {
         donutLegend.innerHTML = '<p class="font-body-sm text-body-sm text-on-surface-variant italic">No hay gastos registrados en este ciclo.</p>';
       } else {
         let accumulatedPercent = 0;
         catEntries.forEach(([cat, val], idx) => {
-          const pct = totalGastado > 0 ? (val / totalGastado) : 0;
+          const pct = totalGastadoFiltrado > 0 ? (val / totalGastadoFiltrado) : 0;
           const strokeDash = pct * circumference;
           const strokeOffset = -(accumulatedPercent * circumference);
           accumulatedPercent += pct;
@@ -699,21 +622,33 @@
         });
       }
 
-      // Ejecución Presupuestaria Dinámica (Gasto vs Techo sin hardcode)
+      // Ejecución Presupuestaria: generar DINÁMICAMENTE las 7 barras de progreso recorriendo metricas.grupos
       const progressContainer = document.getElementById('budget-progress-container');
       progressContainer.innerHTML = '';
-      pBase.categorias.forEach(cat => {
-        const spent = catTotals[cat.nombre] || 0;
-        const limit = cat.limite || 0;
-        const pct = limit > 0 ? Math.min(100, Math.round((spent / limit) * 100)) : (spent > 0 ? 100 : 0);
-        const rem = Math.max(0, limit - spent);
-        
+      
+      const gruposRender = (metricas.grupos && metricas.grupos.length > 0) ? metricas.grupos : GRUPOS_DEF.map(g => ({
+        nombre: g.nombre,
+        icono: g.icono,
+        techo: 0,
+        gastado: 0,
+        restante: 0,
+        porcentaje: 0
+      }));
+
+      gruposRender.forEach(g => {
+        // En caso de estar en filtro de usuario, recalcular gastado local para el grupo
+        const gastadoGrupo = (currentFilter === 'Conjunto') 
+          ? (g.gastado || 0)
+          : (catTotals[g.nombre] || 0);
+
+        const techoGrupo = g.techo || 0;
+        const restanteGrupo = Math.max(0, techoGrupo - gastadoGrupo);
+        const porcentajeGrupo = techoGrupo > 0 ? Math.min(100, Math.round((gastadoGrupo / techoGrupo) * 100)) : (gastadoGrupo > 0 ? 100 : 0);
+
         let barColor = 'bg-primary';
-        let statusText = limit > 0 ? `Quedan ${formatEUR(rem)} disponibles` : (spent > 0 ? 'Sin techo fijado' : '0,00 € disponibles');
-        if (limit > 0 && spent >= limit) {
+        if (techoGrupo > 0 && gastadoGrupo >= techoGrupo) {
           barColor = 'bg-tertiary';
-          statusText = 'Límite alcanzado / superado';
-        } else if (limit > 0 && pct >= 85) {
+        } else if (techoGrupo > 0 && porcentajeGrupo >= 85) {
           barColor = 'bg-tertiary-container';
         }
 
@@ -722,17 +657,17 @@
         block.innerHTML = `
           <div class="flex justify-between items-center font-body-sm text-body-sm">
             <span class="font-bold text-on-surface flex items-center gap-1">
-              <span class="material-symbols-outlined text-[16px] text-on-surface-variant">${cat.icono || getCategoryIcon(cat.nombre)}</span>
-              ${cat.nombre}
+              <span class="material-symbols-outlined text-[16px] text-on-surface-variant">${g.icono || getCategoryIcon(g.nombre)}</span>
+              ${g.nombre}
             </span>
-            <span class="text-on-surface-variant font-bold">${formatEUR(spent)} <span class="font-normal text-xs text-on-surface-variant/70">/ ${formatEUR(limit)}</span></span>
+            <span class="text-on-surface-variant font-bold">${gastadoGrupo.toFixed(2)} € <span class="font-normal text-xs text-on-surface-variant/70">/ ${techoGrupo.toFixed(2)} €</span></span>
           </div>
           <div class="w-full h-2 rounded-full bg-surface-container overflow-hidden">
-            <div class="h-full ${barColor} rounded-full transition-all duration-500" style="width: ${pct}%"></div>
+            <div class="h-full ${barColor} rounded-full transition-all duration-500" style="width: ${porcentajeGrupo}%"></div>
           </div>
           <div class="flex justify-between text-label-caps font-label-caps text-on-surface-variant">
-            <span>${statusText}</span>
-            <span class="font-bold ${pct >= 100 ? 'text-tertiary' : 'text-primary'}">${pct}% gastado</span>
+            <span>${restanteGrupo.toFixed(2)} € disponibles</span>
+            <span class="font-bold ${porcentajeGrupo >= 100 ? 'text-tertiary' : 'text-primary'}">${porcentajeGrupo}% gastado</span>
           </div>
         `;
         progressContainer.appendChild(block);
@@ -755,7 +690,6 @@
           </div>
         `;
       } else {
-        // Mostrar los últimos 4 movimientos
         const ultimos = [...ticketsFiltrados].reverse().slice(0, 4);
         ultimos.forEach((t, i) => {
           const item = document.createElement('div');
@@ -764,7 +698,7 @@
           
           const icon = getCategoryIcon(t.categoria || t.grupo);
           const pagador = t.pagador || t.quien || t.usuario || 'Pamella';
-          const badgeClass = pagador.toLowerCase().includes('alfonsso') 
+          const badgeClass = pagador.toLowerCase().includes('alfonso') 
             ? 'bg-secondary-container text-secondary' 
             : (pagador.toLowerCase().includes('50') ? 'bg-tertiary/20 text-tertiary' : 'bg-primary-container/20 text-primary');
 
@@ -804,7 +738,14 @@
       modalGasto.classList.add('hidden');
     });
 
-    // Selector de Pagador en Modal (Pamella / Alfonsso / 50/50)
+    const btnCancelModal = document.getElementById('btn-cancel-modal');
+    if (btnCancelModal) {
+      btnCancelModal.addEventListener('click', () => {
+        modalGasto.classList.add('hidden');
+      });
+    }
+
+    // Selector de Pagador en Modal
     document.querySelectorAll('.payer-opt').forEach(btn => {
       btn.addEventListener('click', function() {
         document.querySelectorAll('.payer-opt').forEach(b => {
@@ -815,7 +756,7 @@
       });
     });
 
-    // Guardar nuevo gasto
+    // Guardar nuevo gasto con FinanzasSync
     document.getElementById('form-nuevo-gasto').addEventListener('submit', async function(e) {
       e.preventDefault();
       const submitBtn = document.getElementById('btn-submit-gasto');
@@ -840,55 +781,49 @@
         timestamp: new Date().toISOString()
       };
 
-      const tickets = getTickets();
-      tickets.push(nuevoTicket);
-      saveTickets(tickets);
+      if (!appState) {
+        appState = window.FinanzasSync ? window.FinanzasSync.loadState() : { ticketsMes: [] };
+      }
+      if (!Array.isArray(appState.ticketsMes)) {
+        appState.ticketsMes = [];
+      }
+      appState.ticketsMes.push(nuevoTicket);
 
-      renderDashboard();
+      // Guardar inmediatamente en FinanzasSync y en la nube
+      if (window.FinanzasSync) {
+        window.FinanzasSync.saveState(appState, true);
+      }
+
       modalGasto.classList.add('hidden');
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
 
-      // Sincronización background con Google Sheets API
+      // Recalcular y repintar vista al instante
+      renderDashboard();
+
+      // Feedback visual del estado de sincronización
       const syncDot = document.getElementById('sync-dot');
       const syncIcon = document.getElementById('sync-icon');
       const syncText = document.getElementById('sync-text');
-      
       syncDot.classList.add('bg-tertiary');
       syncDot.classList.remove('bg-primary');
       syncText.textContent = 'Sincronizando con Drive...';
       syncIcon.textContent = 'sync';
 
-      try {
-        await fetch(API_URL, {
-          method: 'POST',
-          mode: 'no-cors',
-          headers: { 'Content-Type': 'application/json' },
-          body: JSON.stringify({
-            action: 'add_expense',
-            ticket: nuevoTicket,
-            mes: getMesActual()
-          })
-        });
+      setTimeout(() => {
         syncDot.classList.add('bg-primary');
         syncDot.classList.remove('bg-tertiary');
         syncText.textContent = 'Drive sincronizado';
         syncIcon.textContent = 'cloud_done';
-      } catch (err) {
-        console.warn('Sincronización API offline o en cola:', err);
-        syncDot.classList.add('bg-primary');
-        syncDot.classList.remove('bg-tertiary');
-        syncText.textContent = 'Drive sincronizado localmente';
-        syncIcon.textContent = 'cloud_done';
-      }
+      }, 900);
     });
 
     // Botón Ver todos
     const modalTodos = document.getElementById('modal-todos');
     document.getElementById('btn-ver-todos').addEventListener('click', () => {
-      const tickets = getTickets();
+      const tickets = (appState && appState.ticketsMes) ? appState.ticketsMes : [];
       if (tickets.length === 0) {
-        window.location.href = 'mes-en-curso.html';
+        navigateSafely('mes-en-curso.html');
         return;
       }
       const listContainer = document.getElementById('todos-list-container');
@@ -929,28 +864,17 @@
 
     // Sincronización manual botón cloud
     document.getElementById('btn-sync-cloud').addEventListener('click', async () => {
-      const syncDot = document.getElementById('sync-dot');
       const syncIcon = document.getElementById('sync-icon');
       const syncText = document.getElementById('sync-text');
 
       syncIcon.textContent = 'sync';
       syncText.textContent = 'Comprobando Sheets...';
       try {
-        const resp = await fetch(API_URL + '?action=get_data');
-        if (resp.ok) {
-          const data = await resp.json();
-          if (data && (data.tickets || data.gastos) && Array.isArray(data.tickets || data.gastos)) {
-            saveTickets(data.tickets || data.gastos);
-          }
-          if (data && data.presupuesto) {
-            localStorage.setItem('finanzas_presupuesto_base', JSON.stringify(data.presupuesto));
-          }
-          if (data && data.mes_actual) {
-            localStorage.setItem('finanzas_mes_actual', data.mes_actual);
-          }
+        if (window.FinanzasSync) {
+          appState = await window.FinanzasSync.pullFromCloud();
         }
       } catch (e) {
-        console.warn('Sync cloud fetch error:', e);
+        console.warn('Sync cloud pull error:', e);
       } finally {
         syncIcon.textContent = 'cloud_done';
         syncText.textContent = 'Drive sincronizado';
@@ -958,10 +882,37 @@
       }
     });
 
+    // Enlaces de navegación con guardado de seguridad
+    document.querySelectorAll('.nav-link').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const href = this.getAttribute('href');
+        navigateSafely(href);
+      });
+    });
+
     // Inicialización al cargar la página
-    document.addEventListener('DOMContentLoaded', () => {
+    document.addEventListener('DOMContentLoaded', async () => {
       populateCategorySelect();
+
+      // Cargar localmente primero para pintar al instante
+      if (window.FinanzasSync) {
+        appState = window.FinanzasSync.loadState();
+      }
       renderDashboard();
+
+      // Descargar asíncronamente los últimos datos de la nube
+      if (window.FinanzasSync) {
+        try {
+          const freshState = await window.FinanzasSync.pullFromCloud();
+          if (freshState) {
+            appState = freshState;
+            renderDashboard();
+          }
+        } catch (err) {
+          console.warn('Error al sincronizar con la nube en inicio:', err);
+        }
+      }
     });
   </script>
 </body></html>
